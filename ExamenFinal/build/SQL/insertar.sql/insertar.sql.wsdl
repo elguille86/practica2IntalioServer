@@ -1,0 +1,43 @@
+﻿<wsdl:definitions targetNamespace="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:tns="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:insertarservice">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import schemaLocation="insertar.xsd" namespace="urn:intalio.com:connectors:database:examenfinal:insertarservice"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="insertarInput">
+        <wsdl:part name="parameters" element="ns:insertarParameterSet"/>
+    </wsdl:message>
+    <wsdl:message name="insertarOutput">
+        <wsdl:part name="parameters" element="ns:insertarResultSet"/>
+    </wsdl:message>
+    <wsdl:message name="insertarFault">
+        <wsdl:part name="fault" element="ns:insertarFault"/>
+    </wsdl:message>
+    <wsdl:portType name="insertarPort">
+        <wsdl:operation name="insertar">
+            <wsdl:input message="tns:insertarInput"/>
+            <wsdl:output message="tns:insertarOutput"/>
+            <wsdl:fault message="tns:insertarFault" name="nsinsertarFault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="insertarPortSoapBinding" type="tns:insertarPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="insertar">
+            <soap:operation style="document" soapAction="urn:intalio:connector:jdbc:query:insertar"/>
+            <wsdl:input>
+                <soap:body namespace="urn:intalio.com:connectors:database:examenfinal:insertarservice" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body namespace="urn:intalio.com:connectors:database:examenfinal:insertarservice" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="nsinsertarFault">
+                <soap:body namespace="urn:intalio.com:connectors:database:examenfinal:insertarservice" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="insertarService">
+        <wsdl:port binding="tns:insertarPortSoapBinding" name="insertarPort">
+            <soap:address location="http://localhost:8080/ode/processes/ExamenFinal/SQL/insertar"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

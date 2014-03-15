@@ -1,0 +1,45 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:desicion="http://example.com/Formulario/desicion/xform/attachments" xmlns:this="http://thisdiagram/Walter" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:desicion1="http://example.com/Formulario/desicion/xform" xmlns:diag="http://thisdiagram" xmlns:Servidor="http://thisdiagram/Servidor" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Walter">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/desicion/xform/attachments" bpdm:prefix="desicion" bpdm:comment="contrib=&apos;project:///Formulario/desicion.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Walter" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/desicion/xform" bpdm:prefix="desicion1" bpdm:comment="contrib=&apos;project:///Formulario/desicion.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_j6XP0KxwEeOYl-8lulj8AQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Servidor" bpdm:prefix="Servidor" bpdm:comment="contrib=&apos;partner-pool:///_j6XP0KxwEeOYl-8lulj8AQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_j6XP0KxwEeOYl-8lulj8AQ" bpdm:label="Servidor"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/desicion.xform.all.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/desicion.xform.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Walter" bpdm:ID="_l6vMIKxwEeOYl-8lulj8AQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_6Gev4ax0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Walter_for_ServidorForXformPort" bpdm:enableSharing="false" bpdm:providedService="desicion1:WorkflowSoapService" bpdm:providedPort="xformPort" bpdm:provideSOAPAddress="http://localhost:8080/fds/workflow/xform" bpdm:providedIsDefault="true" partnerRole="Servidor_for_WalterForThePortTypeProcess" bpdm:invokedService="Servidor:WFmagic_6Gev4ax0EeOYl-8lulj8AQService" bpdm:invokedPort="Servidor_for_WalterForThePortTypeProcessPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Walter/WFmagic_6Gev4ax0EeOYl-8lulj8AQ" bpdm:invokedIsDefault="true" bpdm:clientTasks="_l6vMIKxwEeOYl-8lulj8AQ:_6GfW8Kx0EeOYl-8lulj8AQ, _l6vMIKxwEeOYl-8lulj8AQ:_6Gev4ax0EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_j6XP0KxwEeOYl-8lulj8AQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="desicion1CreateTaskRequestMsg" messageType="desicion1:createTaskRequest" binding="desicion1:WorkflowSoapBinding" operation="createTask" opMsgType="0" bpdm:id="_EpkUIKx1EeOYl-8lulj8AQ" bpdm:messageIds="inc:_EpKEcKx1EeOYl-8lulj8AQ"/>
+            <bpel:variable name="desicion1CreateTaskResponseMsg" messageType="desicion1:createTaskResponse" binding="desicion1:WorkflowSoapBinding" operation="createTask" opMsgType="1" bpdm:id="_E624cKx1EeOYl-8lulj8AQ" bpdm:messageIds=" out:_E6o2AKx1EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="desicion1:createTaskResponse" bpdm:linkedPart="root" bpdm:binding="desicion1:WorkflowSoapBinding" bpdm:opMsgType="1" bpdm:operation="createTask"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="desicion1NotifyTaskCompletionRequestMsg" messageType="desicion1:notifyTaskCompletionRequest" bpdm:id="_FkiuoKx1EeOYl-8lulj8AQ" bpdm:messageIds=" out:_FkSP8Kx1EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="desicion1:notifyTaskCompletionRequest" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="desicion1NotifyTaskCompletionResponseMsg" messageType="desicion1:notifyTaskCompletionResponse" bpdm:id="_F6VYcKx1EeOYl-8lulj8AQ" bpdm:messageIds="inc:_F5z0AKx1EeOYl-8lulj8AQ"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="createTask" partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Workflow" isMyRole="true" enableSharing="false" bpdm:label="desicion-create" bpdm:ID="_6Gev4ax0EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="desicion1CreateTaskRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:createTaskRequest" bpdm:binding="desicion1:WorkflowSoapBinding" bpdm:ID="_EpKEcKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="desicion1CreateTaskResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:createTaskResponse" bpdm:binding="desicion1:WorkflowSoapBinding" bpdm:ID="_E6o2AKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="notifyTaskCompletion" partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Process" isMyRole="false" enableSharing="false" bpdm:label="desicion-complete" bpdm:ID="_6GfW8Kx0EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="desicion1NotifyTaskCompletionRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:notifyTaskCompletionRequest" bpdm:ID="_FkSP8Kx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="desicion1NotifyTaskCompletionResponseMsg" bpdm:msgVarScopeId="_l6vMIKxwEeOYl-8lulj8AQ" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:notifyTaskCompletionResponse" bpdm:ID="_F5z0AKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

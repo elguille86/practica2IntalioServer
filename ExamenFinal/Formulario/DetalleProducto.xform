@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xhtml:html xmlns:f="http://orbeon.org/oxf/xml/formatting" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fe="http://example.com/Formulario/DetalleProducto/xform" xmlns:xxforms="http://orbeon.org/oxf/xml/xforms">
+  <xhtml:head>
+    <xhtml:style type="text/css" id="intalio-fe-xforms" xml:space="preserve">#xforms_cntrl_group116 {position : absolute; top : 15px; left : 60px; width : 570px; height : 274px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Codigo_Producto {position : absolute; top : 55px; left : 15px; width : 225px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Codigo_Producto input {width : 128px; height : 19px}
+#xforms_cntrl_Nombre_Producto {position : absolute; top : 55px; left : 285px; width : 270px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Nombre_Producto input {width : 169px; height : 19px}
+#xforms_cntrl_Precio_Producto {position : absolute; top : 100px; left : 15px; width : 255px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Precio_Producto input {width : 162px; height : 19px}
+#xforms_cntrl_Descripcion {position : absolute; top : 142px; left : 15px; width : 480px; height : 60px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Descripcion textarea {width : 408px; height : 52px}
+#xforms_cntrl_Descripcion label.xforms-label {vertical-align : top}
+#xforms_cntrl_Detalle_Producto {position : absolute; top : 15px; left : 180px; width : 100px; height : 22px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Cantidad {position : absolute; top : 232px; left : 15px; width : 165px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Cantidad input {width : 104px; height : 19px}
+#xforms_cntrl_Fecha_Pedido {position : absolute; top : 232px; left : 315px; width : 225px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Fecha_Pedido input {width : 143px; height : 19px}
+</xhtml:style>
+    <xforms:model schema="DetalleProducto.xform.xsd">
+      <!-- Task Input -->
+      <xforms:instance id="taskinput">
+        <fe:input>
+          <group116 xmlns="http://example.com/Formulario/DetalleProducto/xform">
+            <Codigo_Producto/>
+            <Nombre_Producto/>
+            <Precio_Producto/>
+            <Descripcion/>
+            <Detalle_Producto/>
+            <Cantidad/>
+            <Fecha_Pedido/>
+          </group116>
+        </fe:input>
+      </xforms:instance>
+      <!-- Task metadata - used only for People Initiating Processes Task forms -->
+      <xforms:instance id="taskmetadata">
+        <taskmetadata/>
+      </xforms:instance>
+      <!-- Task Output -->
+      <xforms:instance id="taskoutput">
+        <fe:output>
+          <group116 xmlns="http://example.com/Formulario/DetalleProducto/xform">
+            <Codigo_Producto/>
+            <Nombre_Producto/>
+            <Precio_Producto/>
+            <Descripcion/>
+            <Detalle_Producto/>
+            <Cantidad/>
+            <Fecha_Pedido/>
+          </group116>
+        </fe:output>
+      </xforms:instance>
+      <xforms:action ev:event="xforms-ready">
+        <xforms:action xforms:if="string(instance('taskoutput')/@saved) != 'true'">
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Codigo_Producto" value="instance('taskinput')/fe:group116/fe:Codigo_Producto"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Nombre_Producto" value="instance('taskinput')/fe:group116/fe:Nombre_Producto"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Precio_Producto" value="instance('taskinput')/fe:group116/fe:Precio_Producto"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Descripcion" value="instance('taskinput')/fe:group116/fe:Descripcion"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Detalle_Producto" value="instance('taskinput')/fe:group116/fe:Detalle_Producto"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Cantidad" value="instance('taskinput')/fe:group116/fe:Cantidad"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:group116/fe:Fecha_Pedido" value="instance('taskinput')/fe:group116/fe:Fecha_Pedido"/>
+        </xforms:action>
+      </xforms:action>
+    </xforms:model>
+  </xhtml:head>
+  <xhtml:body>
+    <xhtml:div id="intalio-bpms-form">
+      <xhtml:div id="xforms_cntrl_group116">
+        <xforms:group style="width : 570; height : 274" ref="instance('taskoutput')/fe:group116">
+          <xhtml:div id="xforms_cntrl_Codigo_Producto">
+            <xforms:input ref="instance('taskoutput')/fe:group116/fe:Codigo_Producto">
+              <xforms:label>Codigo Producto : </xforms:label>
+            </xforms:input>
+          </xhtml:div>
+          <xhtml:div id="xforms_cntrl_Nombre_Producto">
+            <xforms:input ref="instance('taskoutput')/fe:group116/fe:Nombre_Producto">
+              <xforms:label>Nombre Producto : </xforms:label>
+            </xforms:input>
+          </xhtml:div>
+          <xhtml:div id="xforms_cntrl_Precio_Producto">
+            <xforms:input ref="instance('taskoutput')/fe:group116/fe:Precio_Producto">
+              <xforms:label>Precio Producto : </xforms:label>
+            </xforms:input>
+          </xhtml:div>
+          <xhtml:div id="xforms_cntrl_Descripcion">
+            <xforms:textarea ref="instance('taskoutput')/fe:group116/fe:Descripcion">
+              <xforms:label>Descripcion : </xforms:label>
+            </xforms:textarea>
+          </xhtml:div>
+          <xhtml:div id="xforms_cntrl_Detalle_Producto">
+            <xforms:output ref="instance('taskoutput')/fe:group116/fe:Detalle_Producto">
+              <xforms:label>Detalle Producto</xforms:label>
+            </xforms:output>
+          </xhtml:div>
+          <xhtml:div id="xforms_cntrl_Cantidad">
+            <xforms:input ref="instance('taskoutput')/fe:group116/fe:Cantidad">
+              <xforms:label>Cantidad : </xforms:label>
+            </xforms:input>
+          </xhtml:div>
+          <xhtml:div id="xforms_cntrl_Fecha_Pedido">
+            <xforms:input ref="instance('taskoutput')/fe:group116/fe:Fecha_Pedido">
+              <xforms:label>Fecha Pedido : </xforms:label>
+            </xforms:input>
+          </xhtml:div>
+        </xforms:group>
+      </xhtml:div>
+    </xhtml:div>
+  </xhtml:body>
+</xhtml:html>

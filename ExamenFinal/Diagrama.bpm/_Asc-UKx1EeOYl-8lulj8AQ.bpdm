@@ -1,0 +1,52 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:insertar="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:this="http://thisdiagram/BD" xmlns:diag="http://thisdiagram" xmlns:Servidor="http://thisdiagram/Servidor" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BD">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:examenfinal:selectservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///SQL/Select.sql/Select.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:examenfinal:insertarservice" bpdm:prefix="insertar" bpdm:comment="contrib=&apos;project:///SQL/insertar.sql/insertar.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BD" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_j6XP0KxwEeOYl-8lulj8AQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Servidor" bpdm:prefix="Servidor" bpdm:comment="contrib=&apos;partner-pool:///_j6XP0KxwEeOYl-8lulj8AQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_j6XP0KxwEeOYl-8lulj8AQ" bpdm:label="Servidor"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/Select.sql/Select.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/Select.sql/Select.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/insertar.sql/insertar.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/insertar.sql/insertar.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="BD" bpdm:ID="_Asc-UKx1EeOYl-8lulj8AQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="servidorAndBDForSelectPortPlkVar" partnerLinkType="diag:ServidorAndBDForSelectPortPlk" myRole="BD_for_Servidor" bpdm:enableSharing="false" bpdm:providedService="ns:SelectService" bpdm:providedPort="SelectPort" bpdm:provideSOAPAddress="http://localhost:8080/ode/processes/ExamenFinal/SQL/Select" bpdm:providedIsDefault="true" bpdm:clientTasks="_Asc-UKx1EeOYl-8lulj8AQ:_7dJycKx1EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_j6XP0KxwEeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="servidorAndBDForInsertarPortPlkVar" partnerLinkType="diag:ServidorAndBDForInsertarPortPlk" myRole="BD_for_Servidor" bpdm:enableSharing="false" bpdm:providedService="insertar:insertarService" bpdm:providedPort="insertarPort" bpdm:provideSOAPAddress="http://localhost:8080/ode/processes/ExamenFinal/SQL/insertar" bpdm:providedIsDefault="true" bpdm:clientTasks="_Asc-UKx1EeOYl-8lulj8AQ:_AeflYKx2EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_j6XP0KxwEeOYl-8lulj8AQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="nsSelectRequestMsg" messageType="ns:SelectInput" binding="ns:SelectPortSoapBinding" operation="Select" opMsgType="0" bpdm:id="__LgTg6x1EeOYl-8lulj8AQ" bpdm:messageIds="inc:__LGD0Kx1EeOYl-8lulj8AQ"/>
+            <bpel:variable name="nsSelectResponseMsg" messageType="ns:SelectOutput" binding="ns:SelectPortSoapBinding" operation="Select" opMsgType="1" bpdm:id="__bmlAKx1EeOYl-8lulj8AQ" bpdm:messageIds=" out:__bWGUKx1EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:SelectOutput" bpdm:linkedPart="parameters" bpdm:binding="ns:SelectPortSoapBinding" bpdm:opMsgType="1" bpdm:operation="Select"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="insertarInsertarRequestMsg" messageType="insertar:insertarInput" binding="insertar:insertarPortSoapBinding" operation="insertar" opMsgType="0" bpdm:id="_BL76Nax2EeOYl-8lulj8AQ" bpdm:messageIds="inc:_BLVdQKx2EeOYl-8lulj8AQ"/>
+            <bpel:variable name="insertarInsertarResponseMsg" messageType="insertar:insertarOutput" binding="insertar:insertarPortSoapBinding" operation="insertar" opMsgType="1" bpdm:id="_BdY2kKx2EeOYl-8lulj8AQ" bpdm:messageIds=" out:_BdMCQKx2EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="insertar:insertarOutput" bpdm:linkedPart="parameters" bpdm:binding="insertar:insertarPortSoapBinding" bpdm:opMsgType="1" bpdm:operation="insertar"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:flow>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="insertar" partnerLink="servidorAndBDForInsertarPortPlkVar" portType="insertar:insertarPort" isMyRole="true" enableSharing="false" bpdm:label="Provide-Service-Insertar" bpdm:ID="_AeflYKx2EeOYl-8lulj8AQ">
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="insertarInsertarRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="insertar:insertarInput" bpdm:binding="insertar:insertarPortSoapBinding" bpdm:ID="_BLVdQKx2EeOYl-8lulj8AQ"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="insertarInsertarResponseMsg" bpdm:msgVarScopeId="_Asc-UKx1EeOYl-8lulj8AQ" bpdm:variableIsManaged="true" bpdm:messageType="insertar:insertarOutput" bpdm:binding="insertar:insertarPortSoapBinding" bpdm:ID="_BdMCQKx2EeOYl-8lulj8AQ"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="Select" partnerLink="servidorAndBDForSelectPortPlkVar" portType="ns:SelectPort" isMyRole="true" enableSharing="false" bpdm:label="Provide-Service-Select" bpdm:ID="_7dJycKx1EeOYl-8lulj8AQ">
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="nsSelectRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:SelectInput" bpdm:binding="ns:SelectPortSoapBinding" bpdm:ID="__LGD0Kx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="nsSelectResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:SelectOutput" bpdm:binding="ns:SelectPortSoapBinding" bpdm:ID="__bWGUKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+        </bpel:flow>
+    </bpel:scope>
+</bpel:process>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc:descriptor wsdlLocation="Select.sql.wsdl" targetNamespace="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:jdbc="http://bpms.intalio.com/connectors/jdbc/">
+    <jdbc:service name="SelectService">
+        <jdbc:operation name="urn:Select" sqlStatement="select * from producto where cod_producto = ?" event="false" dynamicCredentials="true" xmlns:urn="urn:intalio.com:connectors:database:examenfinal:selectservice">
+            <jdbc:input>
+                <jdbc:parameter>
+                    <jdbc:mode>1</jdbc:mode>
+                    <jdbc:name>cod_producto</jdbc:name>
+                    <jdbc:type>40</jdbc:type>
+                    <jdbc:length>10</jdbc:length>
+                    <jdbc:typeName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    <jdbc:precision>0</jdbc:precision>
+                    <jdbc:scale>0</jdbc:scale>
+                    <jdbc:nullable>false</jdbc:nullable>
+                    <jdbc:index>0</jdbc:index>
+                </jdbc:parameter>
+            </jdbc:input>
+            <jdbc:filter rowsToSendService="1" rowsToFetch="-1" duration="-PT1S">
+                <jdbc:unique scope="none"/>
+            </jdbc:filter>
+            <jdbc:output/>
+        </jdbc:operation>
+        <jdbc:port>
+            <jdbc:address location="http://localhost:8080/ode/processes/SelectService"/>
+        </jdbc:port>
+        <jdbc:connection jndiName="java:comp/env/jdbc/">
+            <jdbc:databaseProductName>MySql</jdbc:databaseProductName>
+            <jdbc:databaseProductVersion>5.0</jdbc:databaseProductVersion>
+            <jdbc:driverClass>com.mysql.jdbc.Driver</jdbc:driverClass>
+            <jdbc:databaseUrl>jdbc:mysql://localhost:3306/guillermorodriguez</jdbc:databaseUrl>
+            <jdbc:databaseName>guillermorodriguez</jdbc:databaseName>
+            <jdbc:userName>root</jdbc:userName>
+            <jdbc:password>root</jdbc:password>
+        </jdbc:connection>
+    </jdbc:service>
+</jdbc:descriptor>

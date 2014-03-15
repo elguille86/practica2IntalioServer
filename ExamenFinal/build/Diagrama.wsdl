@@ -1,0 +1,34 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:DetalleProducto1="http://example.com/Formulario/DetalleProducto/xform" xmlns:DetalleProducto="http://example.com/Formulario/DetalleProducto/xform/attachments" xmlns:GeneraOrden1="http://example.com/Formulario/GeneraOrden/xform" xmlns:GeneraOrden="http://example.com/Formulario/GeneraOrden/xform/attachments" xmlns:RecepcionPedido1="http://example.com/Formulario/RecepcionPedido/xform" xmlns:RecepcionPedido="http://example.com/Formulario/RecepcionPedido/xform/attachments" xmlns:completaproceso1="http://example.com/Formulario/completaproceso/xform" xmlns:completaproceso="http://example.com/Formulario/completaproceso/xform/attachments" xmlns:desicion1="http://example.com/Formulario/desicion/xform" xmlns:desicion="http://example.com/Formulario/desicion/xform/attachments" xmlns:diag="http://example.com/Diagrama" xmlns:Manual="http://example.com/Diagrama/Manual" xmlns:Servidor="http://example.com/Diagrama/Servidor" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:insertar="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://example.com/Diagrama">
+    <wsdl:import namespace="http://example.com/Formulario/DetalleProducto/xform" location="Formulario/DetalleProducto.xform.all.wsdl"/>
+    <wsdl:import namespace="http://example.com/Formulario/GeneraOrden/xform" location="Formulario/GeneraOrden.xform.all.wsdl"/>
+    <wsdl:import namespace="http://example.com/Formulario/RecepcionPedido/xform" location="Formulario/RecepcionPedido.xform.all.wsdl"/>
+    <wsdl:import namespace="http://example.com/Formulario/completaproceso/xform" location="Formulario/completaproceso.xform.all.wsdl"/>
+    <wsdl:import namespace="http://example.com/Formulario/desicion/xform" location="Formulario/desicion.xform.all.wsdl"/>
+    <wsdl:import namespace="urn:intalio.com:connectors:database:examenfinal:insertarservice" location="SQL/insertar.sql/insertar.sql.wsdl"/>
+    <wsdl:import namespace="urn:intalio.com:connectors:database:examenfinal:selectservice" location="SQL/Select.sql/Select.sql.wsdl"/>
+    <pnlk:partnerLinkType name="ManualAndServidorForPortTypeProcessPlk">
+        <pnlk:role name="Servidor_for_Manual" portType="GeneraOrden1:Process"/>
+    </pnlk:partnerLinkType>
+    <pnlk:partnerLinkType name="ManualAndServidorForXformPortPlk">
+        <pnlk:role name="Manual_for_Servidor" portType="completaproceso1:Workflow"/>
+    </pnlk:partnerLinkType>
+    <pnlk:partnerLinkType name="ServidorAndBDForInsertarPortPlk">
+        <pnlk:role name="BD_for_Servidor" portType="insertar:insertarPort"/>
+    </pnlk:partnerLinkType>
+    <pnlk:partnerLinkType name="ServidorAndBDForSelectPortPlk">
+        <pnlk:role name="BD_for_Servidor" portType="ns:SelectPort"/>
+    </pnlk:partnerLinkType>
+    <pnlk:partnerLinkType name="WFmagic_6Gev4ax0EeOYl-8lulj8AQ">
+        <pnlk:role name="Servidor_for_WalterForThePortTypeProcess" portType="desicion1:Process"/>
+        <pnlk:role name="Walter_for_ServidorForXformPort" portType="desicion1:Workflow"/>
+    </pnlk:partnerLinkType>
+    <pnlk:partnerLinkType name="WFmagic_bVThsKx0EeOYl-8lulj8AQ">
+        <pnlk:role name="Manual_for_ServidorForXformPort" portType="DetalleProducto1:Workflow"/>
+        <pnlk:role name="Servidor_for_ManualForThePortTypeProcess" portType="DetalleProducto1:Process"/>
+    </pnlk:partnerLinkType>
+    <pnlk:partnerLinkType name="WFmagic_pNXdsKx0EeOYl-8lulj8AQ">
+        <pnlk:role name="Claudo_for_ServidorForXformPort" portType="RecepcionPedido1:Workflow"/>
+        <pnlk:role name="Servidor_for_ClaudoForThePortTypeProcess" portType="RecepcionPedido1:Process"/>
+    </pnlk:partnerLinkType>
+</wsdl:definitions>

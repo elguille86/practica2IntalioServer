@@ -1,0 +1,782 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ode="http://www.apache.org/ode/type/extension" xmlns:RecepcionPedido1="http://example.com/Formulario/RecepcionPedido/xform" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:DetalleProducto1="http://example.com/Formulario/DetalleProducto/xform" xmlns:completaproceso="http://example.com/Formulario/completaproceso/xform/attachments" xmlns:RecepcionPedido="http://example.com/Formulario/RecepcionPedido/xform/attachments" xmlns:desicion1="http://example.com/Formulario/desicion/xform" xmlns:BD="http://example.com/Diagrama/BD" xmlns:Manual="http://example.com/Diagrama/Manual" xmlns:GeneraOrden="http://example.com/Formulario/GeneraOrden/xform/attachments" xmlns:DetalleProducto="http://example.com/Formulario/DetalleProducto/xform/attachments" xmlns:diag="http://example.com/Diagrama" xmlns:this="http://example.com/Diagrama/Servidor" xmlns:Walter="http://example.com/Diagrama/Walter" xmlns:desicion="http://example.com/Formulario/desicion/xform/attachments" xmlns:completaproceso1="http://example.com/Formulario/completaproceso/xform" xmlns:insertar="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:Claudo="http://example.com/Diagrama/Claudo" xmlns:GeneraOrden1="http://example.com/Formulario/GeneraOrden/xform" xmlns:bpmn="http://www.intalio.com/bpms" xmlns:atomic="http://ode.apache.org/atomicScope" queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" bpmn:label="Servidor" name="Servidor" bpmn:id="_j6XP0KxwEeOYl-8lulj8AQ" targetNamespace="http://example.com/Diagrama/Servidor">
+  <bpel:import namespace="http://example.com/Formulario/DetalleProducto/xform" location="Formulario/DetalleProducto.xform.all.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="http://example.com/Formulario/GeneraOrden/xform" location="Formulario/GeneraOrden.xform.all.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="http://example.com/Formulario/RecepcionPedido/xform" location="Formulario/RecepcionPedido.xform.all.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="http://example.com/Formulario/completaproceso/xform" location="Formulario/completaproceso.xform.all.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="http://example.com/Formulario/desicion/xform" location="Formulario/desicion.xform.all.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="http://example.com/Diagrama" location="Diagrama.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="urn:intalio.com:connectors:database:examenfinal:insertarservice" location="SQL/insertar.sql/insertar.sql.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:import namespace="urn:intalio.com:connectors:database:examenfinal:selectservice" location="SQL/Select.sql/Select.sql.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+  <bpel:partnerLinks>
+    <bpel:partnerLink name="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_bVThsKx0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Servidor_for_ManualForThePortTypeProcess" partnerRole="Manual_for_ServidorForXformPort"></bpel:partnerLink>
+    <bpel:partnerLink name="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_pNXdsKx0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Servidor_for_ClaudoForThePortTypeProcess" partnerRole="Claudo_for_ServidorForXformPort"></bpel:partnerLink>
+    <bpel:partnerLink name="manualAndServidorForPortTypeProcessPlkVar" partnerLinkType="diag:ManualAndServidorForPortTypeProcessPlk" myRole="Servidor_for_Manual"></bpel:partnerLink>
+    <bpel:partnerLink name="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_6Gev4ax0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Servidor_for_WalterForThePortTypeProcess" partnerRole="Walter_for_ServidorForXformPort"></bpel:partnerLink>
+    <bpel:partnerLink name="servidorAndBDForSelectPortPlkVar" partnerLinkType="diag:ServidorAndBDForSelectPortPlk" initializePartnerRole="yes" partnerRole="BD_for_Servidor"></bpel:partnerLink>
+    <bpel:partnerLink name="servidorAndBDForInsertarPortPlkVar" partnerLinkType="diag:ServidorAndBDForInsertarPortPlk" initializePartnerRole="yes" partnerRole="BD_for_Servidor"></bpel:partnerLink>
+    <bpel:partnerLink name="manualAndServidorForXformPortPlkVar" partnerLinkType="diag:ManualAndServidorForXformPortPlk" initializePartnerRole="yes" partnerRole="Manual_for_Servidor"></bpel:partnerLink>
+  </bpel:partnerLinks>
+  <bpel:variables>
+    <bpel:variable name="generaOrden1InitProcessRequestMsg" messageType="GeneraOrden1:initProcessRequest"></bpel:variable>
+    <bpel:variable name="generaOrden1InitProcessResponseMsg" messageType="GeneraOrden1:initProcessResponse"></bpel:variable>
+    <bpel:variable name="detalleProducto1CreateTaskRequestMsg" messageType="DetalleProducto1:createTaskRequest"></bpel:variable>
+    <bpel:variable name="detalleProducto1CreateTaskResponseMsg" messageType="DetalleProducto1:createTaskResponse"></bpel:variable>
+    <bpel:variable name="detalleProducto1NotifyTaskCompletionRequestMsg" messageType="DetalleProducto1:notifyTaskCompletionRequest"></bpel:variable>
+    <bpel:variable name="detalleProducto1NotifyTaskCompletionResponseMsg" messageType="DetalleProducto1:notifyTaskCompletionResponse"></bpel:variable>
+    <bpel:variable name="recepcionPedido1CreateTaskRequestMsg" messageType="RecepcionPedido1:createTaskRequest"></bpel:variable>
+    <bpel:variable name="recepcionPedido1CreateTaskResponseMsg" messageType="RecepcionPedido1:createTaskResponse"></bpel:variable>
+    <bpel:variable name="recepcionPedido1NotifyTaskCompletionRequestMsg" messageType="RecepcionPedido1:notifyTaskCompletionRequest"></bpel:variable>
+    <bpel:variable name="recepcionPedido1NotifyTaskCompletionResponseMsg" messageType="RecepcionPedido1:notifyTaskCompletionResponse"></bpel:variable>
+    <bpel:variable name="desicion1CreateTaskRequestMsg" messageType="desicion1:createTaskRequest"></bpel:variable>
+    <bpel:variable name="desicion1CreateTaskResponseMsg" messageType="desicion1:createTaskResponse"></bpel:variable>
+    <bpel:variable name="desicion1NotifyTaskCompletionRequestMsg" messageType="desicion1:notifyTaskCompletionRequest"></bpel:variable>
+    <bpel:variable name="desicion1NotifyTaskCompletionResponseMsg" messageType="desicion1:notifyTaskCompletionResponse"></bpel:variable>
+    <bpel:variable name="nsSelectRequestMsg" messageType="ns:SelectInput"></bpel:variable>
+    <bpel:variable name="nsSelectResponseMsg" messageType="ns:SelectOutput"></bpel:variable>
+    <bpel:variable name="insertarInsertarRequestMsg" messageType="insertar:insertarInput"></bpel:variable>
+    <bpel:variable name="insertarInsertarResponseMsg" messageType="insertar:insertarOutput"></bpel:variable>
+    <bpel:variable name="completaproceso1NotifyRequestMsg" messageType="completaproceso1:notifyRequest"></bpel:variable>
+    <bpel:variable name="completaproceso1NotifyResponseMsg" messageType="completaproceso1:notifyResponse"></bpel:variable>
+  </bpel:variables>
+  <bpel:sequence>
+    <bpel:receive partnerLink="manualAndServidorForPortTypeProcessPlkVar" portType="GeneraOrden1:Process" operation="initProcess" variable="generaOrden1InitProcessRequestMsg" createInstance="yes" bpmn:label="Task" name="Task" bpmn:id="_j6X24KxwEeOYl-8lulj8AQ"></bpel:receive>
+    <bpel:assign name="init-variables-Servidor" bpmn:id="_j6X24KxwEeOYl-8lulj8AQ">
+      <bpel:copy bpmn:label="$generaOrden1InitProcessResponseMsg">
+        <bpel:from>
+          <bpel:literal>
+<GeneraOrden1:initProcessResponse>
+  <GeneraOrden1:status>OK</GeneraOrden1:status>
+  <GeneraOrden1:errorCode></GeneraOrden1:errorCode>
+  <GeneraOrden1:errorReason></GeneraOrden1:errorReason>
+  <GeneraOrden1:taskMetaData>
+    <GeneraOrden1:nextTaskId></GeneraOrden1:nextTaskId>
+    <GeneraOrden1:nextTaskURL></GeneraOrden1:nextTaskURL>
+    <GeneraOrden1:instanceId></GeneraOrden1:instanceId>
+  </GeneraOrden1:taskMetaData>
+</GeneraOrden1:initProcessResponse></bpel:literal>
+        </bpel:from>
+        <bpel:to>$generaOrden1InitProcessResponseMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$detalleProducto1CreateTaskRequestMsg">
+        <bpel:from>
+          <bpel:literal>
+<DetalleProducto1:createTaskRequest>
+  <DetalleProducto1:taskMetaData>
+    <DetalleProducto1:taskId>_bVThsKx0EeOYl-8lulj8AQ</DetalleProducto1:taskId>
+    <DetalleProducto1:taskState></DetalleProducto1:taskState>
+    <DetalleProducto1:taskType></DetalleProducto1:taskType>
+    <DetalleProducto1:description/>
+    <DetalleProducto1:processId></DetalleProducto1:processId>
+    <DetalleProducto1:instanceId></DetalleProducto1:instanceId>
+    <DetalleProducto1:business>
+      <DetalleProducto1:processName></DetalleProducto1:processName>
+      <DetalleProducto1:instanceId></DetalleProducto1:instanceId>
+      <DetalleProducto1:stepName></DetalleProducto1:stepName>
+      <DetalleProducto1:customData></DetalleProducto1:customData>
+    </DetalleProducto1:business>
+    <DetalleProducto1:creationDate></DetalleProducto1:creationDate>
+    <DetalleProducto1:userOwner>examples\manuel</DetalleProducto1:userOwner>
+    <DetalleProducto1:roleOwner/>
+    <DetalleProducto1:claimAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:claimAction>
+    <DetalleProducto1:revokeAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:revokeAction>
+    <DetalleProducto1:saveAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:saveAction>
+    <DetalleProducto1:completeAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:completeAction>
+    <DetalleProducto1:formUrl>oxf://ExamenFinal/Formulario/DetalleProducto.xform</DetalleProducto1:formUrl>
+    <DetalleProducto1:failureCode></DetalleProducto1:failureCode>
+    <DetalleProducto1:failureReason></DetalleProducto1:failureReason>
+    <DetalleProducto1:priority></DetalleProducto1:priority>
+    <DetalleProducto1:scheduledActions>
+      <DetalleProducto1:expiration>
+        <DetalleProducto1:until></DetalleProducto1:until>
+        <DetalleProducto1:for></DetalleProducto1:for>
+      </DetalleProducto1:expiration>
+      <DetalleProducto1:deferActivation>
+        <DetalleProducto1:until></DetalleProducto1:until>
+        <DetalleProducto1:for></DetalleProducto1:for>
+      </DetalleProducto1:deferActivation>
+    </DetalleProducto1:scheduledActions>
+    <DetalleProducto1:attachments>
+      <attachment>
+        <attachmentMetadata>
+          <mimeType></mimeType>
+          <fileName></fileName>
+          <title></title>
+          <description/>
+          <creationDate></creationDate>
+        </attachmentMetadata>
+        <payloadUrl></payloadUrl>
+      </attachment>
+    </DetalleProducto1:attachments>
+    <DetalleProducto1:userProcessCompleteSOAPAction>http://example.com/Formulario/DetalleProducto/xform/Process/notifyTaskCompletion</DetalleProducto1:userProcessCompleteSOAPAction>
+    <DetalleProducto1:isChainedBefore></DetalleProducto1:isChainedBefore>
+    <DetalleProducto1:previousTaskId></DetalleProducto1:previousTaskId>
+    <DetalleProducto1:userProcessEndpoint>http://localhost:8080/ode/processes/ExamenFinal/Diagrama/Servidor/Manual/WFmagic_bVThsKx0EeOYl-8lulj8AQ</DetalleProducto1:userProcessEndpoint>
+    <DetalleProducto1:userProcessNamespaceURI>http://example.com/Formulario/DetalleProducto/xform</DetalleProducto1:userProcessNamespaceURI>
+  </DetalleProducto1:taskMetaData>
+  <DetalleProducto1:participantToken></DetalleProducto1:participantToken>
+  <DetalleProducto1:taskInput>
+    <DetalleProducto1:input>
+      <DetalleProducto1:group116>
+        <DetalleProducto1:Codigo_Producto></DetalleProducto1:Codigo_Producto>
+        <DetalleProducto1:Nombre_Producto></DetalleProducto1:Nombre_Producto>
+        <DetalleProducto1:Precio_Producto></DetalleProducto1:Precio_Producto>
+        <DetalleProducto1:Descripcion></DetalleProducto1:Descripcion>
+        <DetalleProducto1:Detalle_Producto></DetalleProducto1:Detalle_Producto>
+        <DetalleProducto1:Cantidad></DetalleProducto1:Cantidad>
+        <DetalleProducto1:Fecha_Pedido></DetalleProducto1:Fecha_Pedido>
+      </DetalleProducto1:group116>
+    </DetalleProducto1:input>
+  </DetalleProducto1:taskInput>
+</DetalleProducto1:createTaskRequest></bpel:literal>
+        </bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$detalleProducto1NotifyTaskCompletionResponseMsg">
+        <bpel:from>
+          <bpel:literal>
+<DetalleProducto1:response>
+  <DetalleProducto1:isChainedAfter></DetalleProducto1:isChainedAfter>
+  <DetalleProducto1:taskMetaData>
+    <DetalleProducto1:taskId></DetalleProducto1:taskId>
+    <DetalleProducto1:taskState></DetalleProducto1:taskState>
+    <DetalleProducto1:taskType></DetalleProducto1:taskType>
+    <DetalleProducto1:description></DetalleProducto1:description>
+    <DetalleProducto1:processId></DetalleProducto1:processId>
+    <DetalleProducto1:instanceId></DetalleProducto1:instanceId>
+    <DetalleProducto1:business>
+      <DetalleProducto1:processName></DetalleProducto1:processName>
+      <DetalleProducto1:instanceId></DetalleProducto1:instanceId>
+      <DetalleProducto1:stepName></DetalleProducto1:stepName>
+      <DetalleProducto1:customData></DetalleProducto1:customData>
+    </DetalleProducto1:business>
+    <DetalleProducto1:creationDate></DetalleProducto1:creationDate>
+    <DetalleProducto1:userOwner></DetalleProducto1:userOwner>
+    <DetalleProducto1:roleOwner></DetalleProducto1:roleOwner>
+    <DetalleProducto1:claimAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:claimAction>
+    <DetalleProducto1:revokeAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:revokeAction>
+    <DetalleProducto1:saveAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:saveAction>
+    <DetalleProducto1:completeAction>
+      <DetalleProducto1:user></DetalleProducto1:user>
+      <DetalleProducto1:role></DetalleProducto1:role>
+    </DetalleProducto1:completeAction>
+    <DetalleProducto1:formUrl></DetalleProducto1:formUrl>
+    <DetalleProducto1:failureCode></DetalleProducto1:failureCode>
+    <DetalleProducto1:failureReason></DetalleProducto1:failureReason>
+    <DetalleProducto1:priority></DetalleProducto1:priority>
+    <DetalleProducto1:scheduledActions>
+      <DetalleProducto1:expiration>
+        <DetalleProducto1:until></DetalleProducto1:until>
+        <DetalleProducto1:for></DetalleProducto1:for>
+      </DetalleProducto1:expiration>
+      <DetalleProducto1:deferActivation>
+        <DetalleProducto1:until></DetalleProducto1:until>
+        <DetalleProducto1:for></DetalleProducto1:for>
+      </DetalleProducto1:deferActivation>
+    </DetalleProducto1:scheduledActions>
+    <DetalleProducto1:attachments>
+      <attachment>
+        <attachmentMetadata>
+          <mimeType></mimeType>
+          <fileName></fileName>
+          <title></title>
+          <description></description>
+          <creationDate></creationDate>
+        </attachmentMetadata>
+        <payloadUrl></payloadUrl>
+      </attachment>
+    </DetalleProducto1:attachments>
+    <DetalleProducto1:userProcessCompleteSOAPAction></DetalleProducto1:userProcessCompleteSOAPAction>
+    <DetalleProducto1:isChainedBefore></DetalleProducto1:isChainedBefore>
+    <DetalleProducto1:previousTaskId></DetalleProducto1:previousTaskId>
+    <DetalleProducto1:userProcessEndpoint></DetalleProducto1:userProcessEndpoint>
+    <DetalleProducto1:userProcessNamespaceURI></DetalleProducto1:userProcessNamespaceURI>
+  </DetalleProducto1:taskMetaData>
+  <DetalleProducto1:status>OK</DetalleProducto1:status>
+  <DetalleProducto1:errorCode></DetalleProducto1:errorCode>
+  <DetalleProducto1:errorReason></DetalleProducto1:errorReason>
+</DetalleProducto1:response></bpel:literal>
+        </bpel:from>
+        <bpel:to>$detalleProducto1NotifyTaskCompletionResponseMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$recepcionPedido1CreateTaskRequestMsg">
+        <bpel:from>
+          <bpel:literal>
+<RecepcionPedido1:createTaskRequest>
+  <RecepcionPedido1:taskMetaData>
+    <RecepcionPedido1:taskId>_pNXdsKx0EeOYl-8lulj8AQ</RecepcionPedido1:taskId>
+    <RecepcionPedido1:taskState></RecepcionPedido1:taskState>
+    <RecepcionPedido1:taskType></RecepcionPedido1:taskType>
+    <RecepcionPedido1:description/>
+    <RecepcionPedido1:processId></RecepcionPedido1:processId>
+    <RecepcionPedido1:instanceId></RecepcionPedido1:instanceId>
+    <RecepcionPedido1:business>
+      <RecepcionPedido1:processName></RecepcionPedido1:processName>
+      <RecepcionPedido1:instanceId></RecepcionPedido1:instanceId>
+      <RecepcionPedido1:stepName></RecepcionPedido1:stepName>
+      <RecepcionPedido1:customData></RecepcionPedido1:customData>
+    </RecepcionPedido1:business>
+    <RecepcionPedido1:creationDate></RecepcionPedido1:creationDate>
+    <RecepcionPedido1:userOwner>examples\claudio</RecepcionPedido1:userOwner>
+    <RecepcionPedido1:roleOwner/>
+    <RecepcionPedido1:claimAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:claimAction>
+    <RecepcionPedido1:revokeAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:revokeAction>
+    <RecepcionPedido1:saveAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:saveAction>
+    <RecepcionPedido1:completeAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:completeAction>
+    <RecepcionPedido1:formUrl>oxf://ExamenFinal/Formulario/RecepcionPedido.xform</RecepcionPedido1:formUrl>
+    <RecepcionPedido1:failureCode></RecepcionPedido1:failureCode>
+    <RecepcionPedido1:failureReason></RecepcionPedido1:failureReason>
+    <RecepcionPedido1:priority></RecepcionPedido1:priority>
+    <RecepcionPedido1:scheduledActions>
+      <RecepcionPedido1:expiration>
+        <RecepcionPedido1:until></RecepcionPedido1:until>
+        <RecepcionPedido1:for></RecepcionPedido1:for>
+      </RecepcionPedido1:expiration>
+      <RecepcionPedido1:deferActivation>
+        <RecepcionPedido1:until></RecepcionPedido1:until>
+        <RecepcionPedido1:for></RecepcionPedido1:for>
+      </RecepcionPedido1:deferActivation>
+    </RecepcionPedido1:scheduledActions>
+    <RecepcionPedido1:attachments>
+      <attachment>
+        <attachmentMetadata>
+          <mimeType></mimeType>
+          <fileName></fileName>
+          <title></title>
+          <description/>
+          <creationDate></creationDate>
+        </attachmentMetadata>
+        <payloadUrl></payloadUrl>
+      </attachment>
+    </RecepcionPedido1:attachments>
+    <RecepcionPedido1:userProcessCompleteSOAPAction>http://example.com/Formulario/RecepcionPedido/xform/Process/notifyTaskCompletion</RecepcionPedido1:userProcessCompleteSOAPAction>
+    <RecepcionPedido1:isChainedBefore></RecepcionPedido1:isChainedBefore>
+    <RecepcionPedido1:previousTaskId></RecepcionPedido1:previousTaskId>
+    <RecepcionPedido1:userProcessEndpoint>http://localhost:8080/ode/processes/ExamenFinal/Diagrama/Servidor/Claudo/WFmagic_pNXdsKx0EeOYl-8lulj8AQ</RecepcionPedido1:userProcessEndpoint>
+    <RecepcionPedido1:userProcessNamespaceURI>http://example.com/Formulario/RecepcionPedido/xform</RecepcionPedido1:userProcessNamespaceURI>
+  </RecepcionPedido1:taskMetaData>
+  <RecepcionPedido1:participantToken></RecepcionPedido1:participantToken>
+  <RecepcionPedido1:taskInput>
+    <RecepcionPedido1:input>
+      <RecepcionPedido1:Fecha_Estado_Revicion></RecepcionPedido1:Fecha_Estado_Revicion>
+      <RecepcionPedido1:Estado></RecepcionPedido1:Estado>
+      <RecepcionPedido1:Total_Pedido></RecepcionPedido1:Total_Pedido>
+      <RecepcionPedido1:Codigo_Producto></RecepcionPedido1:Codigo_Producto>
+      <RecepcionPedido1:Recepcion_de_Pedido></RecepcionPedido1:Recepcion_de_Pedido>
+    </RecepcionPedido1:input>
+  </RecepcionPedido1:taskInput>
+</RecepcionPedido1:createTaskRequest></bpel:literal>
+        </bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$recepcionPedido1NotifyTaskCompletionResponseMsg">
+        <bpel:from>
+          <bpel:literal>
+<RecepcionPedido1:response>
+  <RecepcionPedido1:isChainedAfter></RecepcionPedido1:isChainedAfter>
+  <RecepcionPedido1:taskMetaData>
+    <RecepcionPedido1:taskId></RecepcionPedido1:taskId>
+    <RecepcionPedido1:taskState></RecepcionPedido1:taskState>
+    <RecepcionPedido1:taskType></RecepcionPedido1:taskType>
+    <RecepcionPedido1:description></RecepcionPedido1:description>
+    <RecepcionPedido1:processId></RecepcionPedido1:processId>
+    <RecepcionPedido1:instanceId></RecepcionPedido1:instanceId>
+    <RecepcionPedido1:business>
+      <RecepcionPedido1:processName></RecepcionPedido1:processName>
+      <RecepcionPedido1:instanceId></RecepcionPedido1:instanceId>
+      <RecepcionPedido1:stepName></RecepcionPedido1:stepName>
+      <RecepcionPedido1:customData></RecepcionPedido1:customData>
+    </RecepcionPedido1:business>
+    <RecepcionPedido1:creationDate></RecepcionPedido1:creationDate>
+    <RecepcionPedido1:userOwner></RecepcionPedido1:userOwner>
+    <RecepcionPedido1:roleOwner></RecepcionPedido1:roleOwner>
+    <RecepcionPedido1:claimAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:claimAction>
+    <RecepcionPedido1:revokeAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:revokeAction>
+    <RecepcionPedido1:saveAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:saveAction>
+    <RecepcionPedido1:completeAction>
+      <RecepcionPedido1:user></RecepcionPedido1:user>
+      <RecepcionPedido1:role></RecepcionPedido1:role>
+    </RecepcionPedido1:completeAction>
+    <RecepcionPedido1:formUrl></RecepcionPedido1:formUrl>
+    <RecepcionPedido1:failureCode></RecepcionPedido1:failureCode>
+    <RecepcionPedido1:failureReason></RecepcionPedido1:failureReason>
+    <RecepcionPedido1:priority></RecepcionPedido1:priority>
+    <RecepcionPedido1:scheduledActions>
+      <RecepcionPedido1:expiration>
+        <RecepcionPedido1:until></RecepcionPedido1:until>
+        <RecepcionPedido1:for></RecepcionPedido1:for>
+      </RecepcionPedido1:expiration>
+      <RecepcionPedido1:deferActivation>
+        <RecepcionPedido1:until></RecepcionPedido1:until>
+        <RecepcionPedido1:for></RecepcionPedido1:for>
+      </RecepcionPedido1:deferActivation>
+    </RecepcionPedido1:scheduledActions>
+    <RecepcionPedido1:attachments>
+      <attachment>
+        <attachmentMetadata>
+          <mimeType></mimeType>
+          <fileName></fileName>
+          <title></title>
+          <description></description>
+          <creationDate></creationDate>
+        </attachmentMetadata>
+        <payloadUrl></payloadUrl>
+      </attachment>
+    </RecepcionPedido1:attachments>
+    <RecepcionPedido1:userProcessCompleteSOAPAction></RecepcionPedido1:userProcessCompleteSOAPAction>
+    <RecepcionPedido1:isChainedBefore></RecepcionPedido1:isChainedBefore>
+    <RecepcionPedido1:previousTaskId></RecepcionPedido1:previousTaskId>
+    <RecepcionPedido1:userProcessEndpoint></RecepcionPedido1:userProcessEndpoint>
+    <RecepcionPedido1:userProcessNamespaceURI></RecepcionPedido1:userProcessNamespaceURI>
+  </RecepcionPedido1:taskMetaData>
+  <RecepcionPedido1:status>OK</RecepcionPedido1:status>
+  <RecepcionPedido1:errorCode></RecepcionPedido1:errorCode>
+  <RecepcionPedido1:errorReason></RecepcionPedido1:errorReason>
+</RecepcionPedido1:response></bpel:literal>
+        </bpel:from>
+        <bpel:to>$recepcionPedido1NotifyTaskCompletionResponseMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$desicion1CreateTaskRequestMsg">
+        <bpel:from>
+          <bpel:literal>
+<desicion1:createTaskRequest>
+  <desicion1:taskMetaData>
+    <desicion1:taskId>_6Gev4ax0EeOYl-8lulj8AQ</desicion1:taskId>
+    <desicion1:taskState></desicion1:taskState>
+    <desicion1:taskType></desicion1:taskType>
+    <desicion1:description/>
+    <desicion1:processId></desicion1:processId>
+    <desicion1:instanceId></desicion1:instanceId>
+    <desicion1:business>
+      <desicion1:processName></desicion1:processName>
+      <desicion1:instanceId></desicion1:instanceId>
+      <desicion1:stepName></desicion1:stepName>
+      <desicion1:customData></desicion1:customData>
+    </desicion1:business>
+    <desicion1:creationDate></desicion1:creationDate>
+    <desicion1:userOwner>examples\walter</desicion1:userOwner>
+    <desicion1:roleOwner/>
+    <desicion1:claimAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:claimAction>
+    <desicion1:revokeAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:revokeAction>
+    <desicion1:saveAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:saveAction>
+    <desicion1:completeAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:completeAction>
+    <desicion1:formUrl>oxf://ExamenFinal/Formulario/desicion.xform</desicion1:formUrl>
+    <desicion1:failureCode></desicion1:failureCode>
+    <desicion1:failureReason></desicion1:failureReason>
+    <desicion1:priority></desicion1:priority>
+    <desicion1:scheduledActions>
+      <desicion1:expiration>
+        <desicion1:until></desicion1:until>
+        <desicion1:for></desicion1:for>
+      </desicion1:expiration>
+      <desicion1:deferActivation>
+        <desicion1:until></desicion1:until>
+        <desicion1:for></desicion1:for>
+      </desicion1:deferActivation>
+    </desicion1:scheduledActions>
+    <desicion1:attachments>
+      <attachment>
+        <attachmentMetadata>
+          <mimeType></mimeType>
+          <fileName></fileName>
+          <title></title>
+          <description/>
+          <creationDate></creationDate>
+        </attachmentMetadata>
+        <payloadUrl></payloadUrl>
+      </attachment>
+    </desicion1:attachments>
+    <desicion1:userProcessCompleteSOAPAction>http://example.com/Formulario/desicion/xform/Process/notifyTaskCompletion</desicion1:userProcessCompleteSOAPAction>
+    <desicion1:isChainedBefore></desicion1:isChainedBefore>
+    <desicion1:previousTaskId></desicion1:previousTaskId>
+    <desicion1:userProcessEndpoint>http://localhost:8080/ode/processes/ExamenFinal/Diagrama/Servidor/Walter/WFmagic_6Gev4ax0EeOYl-8lulj8AQ</desicion1:userProcessEndpoint>
+    <desicion1:userProcessNamespaceURI>http://example.com/Formulario/desicion/xform</desicion1:userProcessNamespaceURI>
+  </desicion1:taskMetaData>
+  <desicion1:participantToken></desicion1:participantToken>
+  <desicion1:taskInput>
+    <desicion1:input>
+      <desicion1:EstadoGerente></desicion1:EstadoGerente>
+      <desicion1:Estado_Vendedor></desicion1:Estado_Vendedor>
+      <desicion1:Codigo_Producto></desicion1:Codigo_Producto>
+      <desicion1:Nueva_Orden_de_Pedido></desicion1:Nueva_Orden_de_Pedido>
+    </desicion1:input>
+  </desicion1:taskInput>
+</desicion1:createTaskRequest></bpel:literal>
+        </bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$desicion1NotifyTaskCompletionResponseMsg">
+        <bpel:from>
+          <bpel:literal>
+<desicion1:response>
+  <desicion1:isChainedAfter></desicion1:isChainedAfter>
+  <desicion1:taskMetaData>
+    <desicion1:taskId></desicion1:taskId>
+    <desicion1:taskState></desicion1:taskState>
+    <desicion1:taskType></desicion1:taskType>
+    <desicion1:description></desicion1:description>
+    <desicion1:processId></desicion1:processId>
+    <desicion1:instanceId></desicion1:instanceId>
+    <desicion1:business>
+      <desicion1:processName></desicion1:processName>
+      <desicion1:instanceId></desicion1:instanceId>
+      <desicion1:stepName></desicion1:stepName>
+      <desicion1:customData></desicion1:customData>
+    </desicion1:business>
+    <desicion1:creationDate></desicion1:creationDate>
+    <desicion1:userOwner></desicion1:userOwner>
+    <desicion1:roleOwner></desicion1:roleOwner>
+    <desicion1:claimAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:claimAction>
+    <desicion1:revokeAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:revokeAction>
+    <desicion1:saveAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:saveAction>
+    <desicion1:completeAction>
+      <desicion1:user></desicion1:user>
+      <desicion1:role></desicion1:role>
+    </desicion1:completeAction>
+    <desicion1:formUrl></desicion1:formUrl>
+    <desicion1:failureCode></desicion1:failureCode>
+    <desicion1:failureReason></desicion1:failureReason>
+    <desicion1:priority></desicion1:priority>
+    <desicion1:scheduledActions>
+      <desicion1:expiration>
+        <desicion1:until></desicion1:until>
+        <desicion1:for></desicion1:for>
+      </desicion1:expiration>
+      <desicion1:deferActivation>
+        <desicion1:until></desicion1:until>
+        <desicion1:for></desicion1:for>
+      </desicion1:deferActivation>
+    </desicion1:scheduledActions>
+    <desicion1:attachments>
+      <attachment>
+        <attachmentMetadata>
+          <mimeType></mimeType>
+          <fileName></fileName>
+          <title></title>
+          <description></description>
+          <creationDate></creationDate>
+        </attachmentMetadata>
+        <payloadUrl></payloadUrl>
+      </attachment>
+    </desicion1:attachments>
+    <desicion1:userProcessCompleteSOAPAction></desicion1:userProcessCompleteSOAPAction>
+    <desicion1:isChainedBefore></desicion1:isChainedBefore>
+    <desicion1:previousTaskId></desicion1:previousTaskId>
+    <desicion1:userProcessEndpoint></desicion1:userProcessEndpoint>
+    <desicion1:userProcessNamespaceURI></desicion1:userProcessNamespaceURI>
+  </desicion1:taskMetaData>
+  <desicion1:status>OK</desicion1:status>
+  <desicion1:errorCode></desicion1:errorCode>
+  <desicion1:errorReason></desicion1:errorReason>
+</desicion1:response></bpel:literal>
+        </bpel:from>
+        <bpel:to>$desicion1NotifyTaskCompletionResponseMsg.root</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$nsSelectRequestMsg">
+        <bpel:from>
+          <bpel:literal>
+<ns:SelectParameterSet>
+  <ns:connection>
+    <ns:user></ns:user>
+    <ns:password></ns:password>
+  </ns:connection>
+  <ns:execute>
+    <ns:parameters>
+      <ns:cod_producto></ns:cod_producto>
+    </ns:parameters>
+  </ns:execute>
+</ns:SelectParameterSet></bpel:literal>
+        </bpel:from>
+        <bpel:to>$nsSelectRequestMsg.parameters</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$insertarInsertarRequestMsg">
+        <bpel:from>
+          <bpel:literal>
+<insertar:insertarParameterSet>
+  <insertar:connection>
+    <insertar:user></insertar:user>
+    <insertar:password></insertar:password>
+  </insertar:connection>
+  <insertar:execute>
+    <insertar:parameters>
+      <insertar:Parameter0></insertar:Parameter0>
+      <insertar:Parameter1></insertar:Parameter1>
+      <insertar:Parameter2></insertar:Parameter2>
+      <insertar:Parameter3></insertar:Parameter3>
+      <insertar:Parameter4></insertar:Parameter4>
+      <insertar:Parameter5></insertar:Parameter5>
+    </insertar:parameters>
+  </insertar:execute>
+</insertar:insertarParameterSet></bpel:literal>
+        </bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$completaproceso1NotifyRequestMsg">
+        <bpel:from>
+          <bpel:literal>
+<completaproceso1:notifyRequest>
+  <completaproceso1:metadata>
+    <completaproceso1:description/>
+    <completaproceso1:creationDate></completaproceso1:creationDate>
+    <completaproceso1:processId></completaproceso1:processId>
+    <completaproceso1:instanceId></completaproceso1:instanceId>
+    <completaproceso1:userOwner>examples\manuel</completaproceso1:userOwner>
+    <completaproceso1:roleOwner/>
+    <completaproceso1:formUrl>oxf://ExamenFinal/Formulario/completaproceso.xform</completaproceso1:formUrl>
+    <completaproceso1:dismissAction>
+      <completaproceso1:user></completaproceso1:user>
+      <completaproceso1:role></completaproceso1:role>
+    </completaproceso1:dismissAction>
+    <completaproceso1:priority></completaproceso1:priority>
+  </completaproceso1:metadata>
+  <completaproceso1:input>
+    <completaproceso1:input>
+      <completaproceso1:Fecha_Pedido></completaproceso1:Fecha_Pedido>
+      <completaproceso1:Total></completaproceso1:Total>
+      <completaproceso1:Nombre_Producto></completaproceso1:Nombre_Producto>
+      <completaproceso1:Estado></completaproceso1:Estado>
+      <completaproceso1:Codigo_Producto></completaproceso1:Codigo_Producto>
+      <completaproceso1:Nuevo_Pedido></completaproceso1:Nuevo_Pedido>
+    </completaproceso1:input>
+  </completaproceso1:input>
+</completaproceso1:notifyRequest></bpel:literal>
+        </bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign>
+    <bpel:copy>
+        <bpel:from>$ode:pid</bpel:from>
+        <bpel:to>$generaOrden1InitProcessResponseMsg.root/GeneraOrden1:taskMetaData/GeneraOrden1:instanceId</bpel:to>
+    </bpel:copy>
+  </bpel:assign>
+  <bpel:reply partnerLink="manualAndServidorForPortTypeProcessPlkVar" portType="GeneraOrden1:Process" operation="initProcess" variable="generaOrden1InitProcessResponseMsg" bpmn:label="Task" name="Task-1" bpmn:id="_j6X24KxwEeOYl-8lulj8AQ"></bpel:reply>
+    <bpel:assign bpmn:label="Task" name="Task-2" bpmn:id="_85nJYKx1EeOYl-8lulj8AQ">
+      <bpel:copy>
+        <bpel:from>$generaOrden1InitProcessRequestMsg.root/GeneraOrden1:taskOutput/GeneraOrden1:output/GeneraOrden1:group27/GeneraOrden1:Codigo_Producto</bpel:from>
+        <bpel:to>$nsSelectRequestMsg.parameters/ns:execute/ns:parameters/ns:cod_producto</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:invoke partnerLink="servidorAndBDForSelectPortPlkVar" portType="ns:SelectPort" operation="Select" inputVariable="nsSelectRequestMsg" outputVariable="nsSelectResponseMsg" bpmn:label="Task" name="Task-3" bpmn:id="_85nJYKx1EeOYl-8lulj8AQ"></bpel:invoke>
+    <bpel:assign bpmn:label="Task" name="Task-4" bpmn:id="_6GRRUKxwEeOYl-8lulj8AQ">
+      <bpel:copy>
+        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:cod_producto</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Codigo_Producto</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:nom_producto</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:pre_producto</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Precio_Producto</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:des_producto</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Descripcion</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign>
+    <bpel:copy>
+        <bpel:from>$ode:pid</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskMetaData/DetalleProducto1:instanceId</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"http://localhost:8080/ode/processes/ExamenFinal/Diagrama/Servidor/Manual/WFmagic_bVThsKx0EeOYl-8lulj8AQ"</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskMetaData/DetalleProducto1:userProcessEndpoint</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"http://example.com/Formulario/DetalleProducto/xform/Process/notifyTaskCompletion"</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskMetaData/DetalleProducto1:userProcessCompleteSOAPAction</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"_bVUv0Kx0EeOYl-8lulj8AQ"</bpel:from>
+        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskMetaData/DetalleProducto1:taskId</bpel:to>
+    </bpel:copy>
+  </bpel:assign>
+  <bpel:invoke partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" portType="DetalleProducto1:Workflow" operation="createTask" inputVariable="detalleProducto1CreateTaskRequestMsg" outputVariable="detalleProducto1CreateTaskResponseMsg" bpmn:label="Task" name="Task-5" bpmn:id="_6GRRUKxwEeOYl-8lulj8AQ"></bpel:invoke>
+    <bpel:receive partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" portType="DetalleProducto1:Process" operation="notifyTaskCompletion" variable="detalleProducto1NotifyTaskCompletionRequestMsg" bpmn:label="Task" name="Task-6" bpmn:id="_6iG4wKxwEeOYl-8lulj8AQ"></bpel:receive>
+    <bpel:reply partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" portType="DetalleProducto1:Process" operation="notifyTaskCompletion" variable="detalleProducto1NotifyTaskCompletionResponseMsg" bpmn:label="Task" name="Task-7" bpmn:id="_6iG4wKxwEeOYl-8lulj8AQ"></bpel:reply>
+    <bpel:assign bpmn:label="Task" name="Task-8" bpmn:id="_7BKMQKxwEeOYl-8lulj8AQ">
+      <bpel:copy>
+        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Codigo_Producto</bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskInput/RecepcionPedido1:input/RecepcionPedido1:Codigo_Producto</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Cantidad * $detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Precio_Producto</bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskInput/RecepcionPedido1:input/RecepcionPedido1:Total_Pedido</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign>
+    <bpel:copy>
+        <bpel:from>$ode:pid</bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskMetaData/RecepcionPedido1:instanceId</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"http://localhost:8080/ode/processes/ExamenFinal/Diagrama/Servidor/Claudo/WFmagic_pNXdsKx0EeOYl-8lulj8AQ"</bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskMetaData/RecepcionPedido1:userProcessEndpoint</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"http://example.com/Formulario/RecepcionPedido/xform/Process/notifyTaskCompletion"</bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskMetaData/RecepcionPedido1:userProcessCompleteSOAPAction</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"_pNYr0Kx0EeOYl-8lulj8AQ"</bpel:from>
+        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskMetaData/RecepcionPedido1:taskId</bpel:to>
+    </bpel:copy>
+  </bpel:assign>
+  <bpel:invoke partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" portType="RecepcionPedido1:Workflow" operation="createTask" inputVariable="recepcionPedido1CreateTaskRequestMsg" outputVariable="recepcionPedido1CreateTaskResponseMsg" bpmn:label="Task" name="Task-9" bpmn:id="_7BKMQKxwEeOYl-8lulj8AQ"></bpel:invoke>
+    <bpel:receive partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" portType="RecepcionPedido1:Process" operation="notifyTaskCompletion" variable="recepcionPedido1NotifyTaskCompletionRequestMsg" bpmn:label="Task" name="Task-10" bpmn:id="_qso4EKx0EeOYl-8lulj8AQ"></bpel:receive>
+    <bpel:reply partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" portType="RecepcionPedido1:Process" operation="notifyTaskCompletion" variable="recepcionPedido1NotifyTaskCompletionResponseMsg" bpmn:label="Task" name="Task-11" bpmn:id="_qso4EKx0EeOYl-8lulj8AQ"></bpel:reply>
+    <bpel:assign bpmn:label="Task" name="Task-12" bpmn:id="_64PkAKx0EeOYl-8lulj8AQ">
+      <bpel:copy>
+        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Estado</bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskInput/desicion1:input/desicion1:Estado_Vendedor</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Codigo_Producto</bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskInput/desicion1:input/desicion1:Codigo_Producto</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign>
+    <bpel:copy>
+        <bpel:from>$ode:pid</bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskMetaData/desicion1:instanceId</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"http://localhost:8080/ode/processes/ExamenFinal/Diagrama/Servidor/Walter/WFmagic_6Gev4ax0EeOYl-8lulj8AQ"</bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskMetaData/desicion1:userProcessEndpoint</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"http://example.com/Formulario/desicion/xform/Process/notifyTaskCompletion"</bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskMetaData/desicion1:userProcessCompleteSOAPAction</bpel:to>
+    </bpel:copy>
+    <bpel:copy>
+        <bpel:from>"_6GfW8Kx0EeOYl-8lulj8AQ"</bpel:from>
+        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskMetaData/desicion1:taskId</bpel:to>
+    </bpel:copy>
+  </bpel:assign>
+  <bpel:invoke partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Workflow" operation="createTask" inputVariable="desicion1CreateTaskRequestMsg" outputVariable="desicion1CreateTaskResponseMsg" bpmn:label="Task" name="Task-13" bpmn:id="_64PkAKx0EeOYl-8lulj8AQ"></bpel:invoke>
+    <bpel:receive partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Process" operation="notifyTaskCompletion" variable="desicion1NotifyTaskCompletionRequestMsg" bpmn:label="Task" name="Task-14" bpmn:id="_7QXJEKx0EeOYl-8lulj8AQ"></bpel:receive>
+    <bpel:reply partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Process" operation="notifyTaskCompletion" variable="desicion1NotifyTaskCompletionResponseMsg" bpmn:label="Task" name="Task-15" bpmn:id="_7QXJEKx0EeOYl-8lulj8AQ"></bpel:reply>
+    <bpel:assign bpmn:label="Task" name="Task-16" bpmn:id="_HgbMgKx1EeOYl-8lulj8AQ">
+      <bpel:copy>
+        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:Codigo_Producto</bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter0</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto</bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter1</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Total_Pedido</bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter2</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Fecha_Pedido</bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter3</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:EstadoGerente</bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter5</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Estado</bpel:from>
+        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter4</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:invoke partnerLink="servidorAndBDForInsertarPortPlkVar" portType="insertar:insertarPort" operation="insertar" inputVariable="insertarInsertarRequestMsg" outputVariable="insertarInsertarResponseMsg" bpmn:label="Task" name="Task-17" bpmn:id="_HgbMgKx1EeOYl-8lulj8AQ"></bpel:invoke>
+    <bpel:assign bpmn:label="Task" name="Task-18" bpmn:id="_IBw_AKx1EeOYl-8lulj8AQ">
+      <bpel:copy>
+        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:Codigo_Producto</bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Codigo_Producto</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:EstadoGerente</bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Estado</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto</bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Nombre_Producto</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Total_Pedido</bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Total</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Fecha_Pedido</bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Fecha_Pedido</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign>
+    <bpel:copy>
+        <bpel:from>$ode:pid</bpel:from>
+        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:metadata/completaproceso1:instanceId</bpel:to>
+    </bpel:copy>
+  </bpel:assign>
+  <bpel:invoke partnerLink="manualAndServidorForXformPortPlkVar" portType="completaproceso1:Workflow" operation="notify" inputVariable="completaproceso1NotifyRequestMsg" outputVariable="completaproceso1NotifyResponseMsg" bpmn:label="Task" name="Task-19" bpmn:id="_IBw_AKx1EeOYl-8lulj8AQ"></bpel:invoke>
+  </bpel:sequence>
+</bpel:process>

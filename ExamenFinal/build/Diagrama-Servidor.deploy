@@ -1,0 +1,35 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<dd:process xmlns:DetalleProducto1="http://example.com/Formulario/DetalleProducto/xform" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:Walter="http://example.com/Diagrama/Walter" xmlns:Manual="http://example.com/Diagrama/Manual" xmlns:completaproceso1="http://example.com/Formulario/completaproceso/xform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:RecepcionPedido="http://example.com/Formulario/RecepcionPedido/xform/attachments" xmlns:RecepcionPedido1="http://example.com/Formulario/RecepcionPedido/xform" xmlns:desicion1="http://example.com/Formulario/desicion/xform" xmlns:GeneraOrden="http://example.com/Formulario/GeneraOrden/xform/attachments" xmlns:dd="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:diag="http://example.com/Diagrama" xmlns:desicion="http://example.com/Formulario/desicion/xform/attachments" xmlns:completaproceso="http://example.com/Formulario/completaproceso/xform/attachments" xmlns:BD="http://example.com/Diagrama/BD" xmlns:Claudo="http://example.com/Diagrama/Claudo" xmlns:insertar="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:this="http://example.com/Diagrama/Servidor" xmlns:DetalleProducto="http://example.com/Formulario/DetalleProducto/xform/attachments" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GeneraOrden1="http://example.com/Formulario/GeneraOrden/xform" name="this:Servidor" fileName="Diagrama-Servidor.bpel">
+  <dd:property name="PATH">Diagrama</dd:property>
+  <dd:property name="SVG">Diagrama.svg</dd:property>
+  <dd:provide partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar">
+    <dd:service name="this:WFmagic_bVThsKx0EeOYl-8lulj8AQService" port="Servidor_for_ManualForThePortTypeProcessPort"></dd:service>
+  </dd:provide>
+  <dd:invoke partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar">
+    <dd:service name="DetalleProducto1:WorkflowSoapService" port="xformPort"/>
+  </dd:invoke>
+  <dd:provide partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar">
+    <dd:service name="this:WFmagic_pNXdsKx0EeOYl-8lulj8AQService" port="Servidor_for_ClaudoForThePortTypeProcessPort"></dd:service>
+  </dd:provide>
+  <dd:invoke partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar">
+    <dd:service name="RecepcionPedido1:WorkflowSoapService" port="xformPort"/>
+  </dd:invoke>
+  <dd:provide partnerLink="manualAndServidorForPortTypeProcessPlkVar">
+    <dd:service name="this:ManualAndServidorForPortTypeProcessPlkService" port="Servidor_for_ManualPort"></dd:service>
+  </dd:provide>
+  <dd:provide partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar">
+    <dd:service name="this:WFmagic_6Gev4ax0EeOYl-8lulj8AQService" port="Servidor_for_WalterForThePortTypeProcessPort"></dd:service>
+  </dd:provide>
+  <dd:invoke partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar">
+    <dd:service name="desicion1:WorkflowSoapService" port="xformPort"/>
+  </dd:invoke>
+  <dd:invoke partnerLink="servidorAndBDForSelectPortPlkVar">
+    <dd:service name="ns:SelectService" port="SelectPort"/>
+  </dd:invoke>
+  <dd:invoke partnerLink="servidorAndBDForInsertarPortPlkVar">
+    <dd:service name="insertar:insertarService" port="insertarPort"/>
+  </dd:invoke>
+  <dd:invoke partnerLink="manualAndServidorForXformPortPlkVar">
+    <dd:service name="completaproceso1:WorkflowSoapService" port="xformPort"/>
+  </dd:invoke>
+</dd:process>

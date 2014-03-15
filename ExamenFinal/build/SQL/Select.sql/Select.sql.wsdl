@@ -1,0 +1,43 @@
+﻿<wsdl:definitions targetNamespace="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:tns="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:selectservice">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import schemaLocation="Select.xsd" namespace="urn:intalio.com:connectors:database:examenfinal:selectservice"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="SelectInput">
+        <wsdl:part name="parameters" element="ns:SelectParameterSet"/>
+    </wsdl:message>
+    <wsdl:message name="SelectOutput">
+        <wsdl:part name="parameters" element="ns:SelectResultSet"/>
+    </wsdl:message>
+    <wsdl:message name="SelectFault">
+        <wsdl:part name="fault" element="ns:SelectFault"/>
+    </wsdl:message>
+    <wsdl:portType name="SelectPort">
+        <wsdl:operation name="Select">
+            <wsdl:input message="tns:SelectInput"/>
+            <wsdl:output message="tns:SelectOutput"/>
+            <wsdl:fault message="tns:SelectFault" name="nsSelectFault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SelectPortSoapBinding" type="tns:SelectPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Select">
+            <soap:operation style="document" soapAction="urn:intalio:connector:jdbc:query:Select"/>
+            <wsdl:input>
+                <soap:body namespace="urn:intalio.com:connectors:database:examenfinal:selectservice" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body namespace="urn:intalio.com:connectors:database:examenfinal:selectservice" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="nsSelectFault">
+                <soap:body namespace="urn:intalio.com:connectors:database:examenfinal:selectservice" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SelectService">
+        <wsdl:port binding="tns:SelectPortSoapBinding" name="SelectPort">
+            <soap:address location="http://localhost:8080/ode/processes/ExamenFinal/SQL/Select"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

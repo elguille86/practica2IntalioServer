@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_j6HYMaxwEeOYl-8lulj8AQ" iD="_j6HYMKxwEeOYl-8lulj8AQ">
+  <pools xmi:type="bpmn:Pool" xmi:id="_j6XP0axwEeOYl-8lulj8AQ" iD="_j6XP0KxwEeOYl-8lulj8AQ" name="Servidor">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_1Glj4axzEeOYl-8lulj8AQ" iD="_1Glj4KxzEeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1Glj4qxzEeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1Glj46xzEeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GmK-KxzEeOYl-8lulj8AQ" key="defaultDeclarationName" value="generaOrden1InitProcessRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GnZEaxzEeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/GeneraOrden/xform}initProcessRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_1GmyAKxzEeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1GmyAaxzEeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GnZEKxzEeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_1ZXV8axzEeOYl-8lulj8AQ" iD="_1ZXV8KxzEeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1ZXV8qxzEeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZXV86xzEeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZZLIqxzEeOYl-8lulj8AQ" key="defaultDeclarationName" value="generaOrden1InitProcessResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZbnYaxzEeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/GeneraOrden/xform}initProcessResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_1ZZyMKxzEeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1ZaZQKxzEeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZbnYKxzEeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_eBsPcKx0EeOYl-8lulj8AQ" iD="_eBroYKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eBsPcax0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBsPcqx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBuruKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1CreateTaskRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBxH8ax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}createTaskRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_eBv50Kx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eBwg4Kx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBxH8Kx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_eQgulqx0EeOYl-8lulj8AQ" iD="_eQgulax0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQgul6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQgumKx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQjK0qx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1CreateTaskResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQmOIax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}createTaskResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_eQjx4Kx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQlAAKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQmOIKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ez69pqx0EeOYl-8lulj8AQ" iD="_ez69pax0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ez69p6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ez69qKx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ez9Z4qx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1NotifyTaskCompletionRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e0AdMax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}notifyTaskCompletionRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ez-oAKx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ez_PEKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e0AdMKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_fHA4wax0EeOYl-8lulj8AQ" iD="_fHA4wKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fHA4wqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHA4w6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHDVCKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1NotifyTaskCompletionResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHG_Yax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}notifyTaskCompletionResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_fHEjIKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fHFxQKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHG_YKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_pnRygax0EeOYl-8lulj8AQ" iD="_pnRygKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pnRygqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnRyg6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnVc6Kx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1CreateTaskRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnZuUax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}createTaskRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_pnWrAKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pnX5IKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnZuUKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_qah0Zqx0EeOYl-8lulj8AQ" iD="_qah0Zax0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qah0Z6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qah0aKx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qalewax0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1CreateTaskResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qapwMax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}createTaskResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_qams4Kx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qaoiEKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qapwMKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_rQGxhqx0EeOYl-8lulj8AQ" iD="_rQGxhax0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rQGxh6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQGxiKx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQKb6Kx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1NotifyTaskCompletionRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQPUYax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}notifyTaskCompletionRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_rQMREKx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rQNfMKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQPUYKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_rfbm8ax0EeOYl-8lulj8AQ" iD="_rfbm8Kx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rfbm8qx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfbm86x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rffRWKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1NotifyTaskCompletionResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfkw4ax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}notifyTaskCompletionResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_rfhGgKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rfi7sKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfkw4Kx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_EpXf0Kx1EeOYl-8lulj8AQ" iD="_EpW4wKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EpXf0ax1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpXf0qx1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpeNgqx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1CreateTaskRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpjtEKx1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}createTaskRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_EpgCsKx1EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Eph34Kx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpjGAKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_E657xqx1EeOYl-8lulj8AQ" iD="_E657xax1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E657x6x1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E657yKx1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E6-0Qax1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1CreateTaskResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E7E64ax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}createTaskResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_E7ApcKx1EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E7CeoKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E7E64Kx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_FkoONqx1EeOYl-8lulj8AQ" iD="_FkoONax1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FkoON6x1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FkoOOKx1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FktGsax1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1NotifyTaskCompletionRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FkzNUax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}notifyTaskCompletionRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Fku74Kx1EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FkwxEKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FkzNUKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_F6Fg0ax1EeOYl-8lulj8AQ" iD="_F6Fg0Kx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F6Fg0qx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6Fg06x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6LAYKx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1NotifyTaskCompletionResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6UKUax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}notifyTaskCompletionResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_F6M1kKx1EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F6RuEKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6UKUKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="__LTfMKx1EeOYl-8lulj8AQ" iD="__LS4IKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__LTfMax1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__LTfMqx1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__LYXuKx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="nsSelectRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__Lfscax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectInput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="__Laz8Kx1EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__LdQMKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__LfscKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="__bqPZax1EeOYl-8lulj8AQ" iD="__bqPZKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__bqPZqx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__bqPZ6x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__bvH6Kx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="nsSelectResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__b5f8ax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectOutput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="__bxkIKx1EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__b3DsKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__b5f8Kx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_BLqNYax2EeOYl-8lulj8AQ" iD="_BLqNYKx2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BLqNYqx2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLqNY6x2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLzXWKx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="insertarInsertarRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BL7TIax2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarInput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_BL1zkKx2EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BL424Kx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BL7TIKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_BdfkRqx2EeOYl-8lulj8AQ" iD="_BdfkRax2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BdfkR6x2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BdfkSKx2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bdlq6Kx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="insertarInsertarResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BdwqAax2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarOutput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_BdouMKx2EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BdrKcKx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BdwqAKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_F08Foax2EeOYl-8lulj8AQ" iD="_F08FoKx2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F08Foqx2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F08Fo6x2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1EoiKx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="completaproceso1NotifyRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1NLYax2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/completaproceso/xform}notifyRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_F1Hr0Kx2EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F1KvIKx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1NLYKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_GDZ_dqx2EeOYl-8lulj8AQ" iD="_GDZ_dax2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GDZ_d6x2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDZ_eKx2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDiiWKx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="completaproceso1NotifyResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDsTUKx2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/completaproceso/xform}notifyResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_GDmMsKx2EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GDpQAKx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDrsQKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_j6X24axwEeOYl-8lulj8AQ" iD="_j6X24KxwEeOYl-8lulj8AQ" associations="_1GmyAKxzEeOYl-8lulj8AQ _1ZZyMKxzEeOYl-8lulj8AQ" outgoingEdges="_85w6Yax1EeOYl-8lulj8AQ" name="Task" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_1GL7QaxzEeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_1Y9GQaxzEeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_6GRRUaxwEeOYl-8lulj8AQ" iD="_6GRRUKxwEeOYl-8lulj8AQ" associations="_eBv50Kx0EeOYl-8lulj8AQ _eQjx4Kx0EeOYl-8lulj8AQ" outgoingEdges="_6iM_YaxwEeOYl-8lulj8AQ" incomingEdges="_9TwHsax1EeOYl-8lulj8AQ" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_eBZ7kax0EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_eQIUEax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_6iG4waxwEeOYl-8lulj8AQ" iD="_6iG4wKxwEeOYl-8lulj8AQ" associations="_ez-oAKx0EeOYl-8lulj8AQ _fHEjIKx0EeOYl-8lulj8AQ" outgoingEdges="_7BQS4axwEeOYl-8lulj8AQ" incomingEdges="_6iM_YaxwEeOYl-8lulj8AQ" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_ezijIax0EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_fGrhkax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_7BKMQaxwEeOYl-8lulj8AQ" iD="_7BKMQKxwEeOYl-8lulj8AQ" associations="_pnWrAKx0EeOYl-8lulj8AQ _qams4Kx0EeOYl-8lulj8AQ" outgoingEdges="_qswz4ax0EeOYl-8lulj8AQ" incomingEdges="_7BQS4axwEeOYl-8lulj8AQ" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_pnDwEax0EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_qaKoAax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_qso4Eax0EeOYl-8lulj8AQ" iD="_qso4EKx0EeOYl-8lulj8AQ" associations="_rQMREKx0EeOYl-8lulj8AQ _rfhGgKx0EeOYl-8lulj8AQ" outgoingEdges="_64YG4ax0EeOYl-8lulj8AQ" incomingEdges="_qswz4ax0EeOYl-8lulj8AQ" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_rPzPgax0EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_rfRO4ax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_64PkAax0EeOYl-8lulj8AQ" iD="_64PkAKx0EeOYl-8lulj8AQ" associations="_EpgCsKx1EeOYl-8lulj8AQ _E7ApcKx1EeOYl-8lulj8AQ" outgoingEdges="_7Qfr8ax0EeOYl-8lulj8AQ" incomingEdges="_64YG4ax0EeOYl-8lulj8AQ" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_EpKEcax1EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_E6o2Aax1EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_7QXJEax0EeOYl-8lulj8AQ" iD="_7QXJEKx0EeOYl-8lulj8AQ" associations="_Fku74Kx1EeOYl-8lulj8AQ _F6M1kKx1EeOYl-8lulj8AQ" outgoingEdges="_HgkWcax1EeOYl-8lulj8AQ" incomingEdges="_7Qfr8ax0EeOYl-8lulj8AQ" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_FkSP8ax1EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_F5z0Aax1EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_HgbMgax1EeOYl-8lulj8AQ" iD="_HgbMgKx1EeOYl-8lulj8AQ" associations="_BL1zkKx2EeOYl-8lulj8AQ _BdouMKx2EeOYl-8lulj8AQ" outgoingEdges="_IB6wAax1EeOYl-8lulj8AQ" incomingEdges="_HgkWcax1EeOYl-8lulj8AQ" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_BLVdQax2EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_BdMCQax2EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_IBw_Aax1EeOYl-8lulj8AQ" iD="_IBw_AKx1EeOYl-8lulj8AQ" associations="_F1Hr0Kx2EeOYl-8lulj8AQ _GDmMsKx2EeOYl-8lulj8AQ" incomingEdges="_IB6wAax1EeOYl-8lulj8AQ" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_F0pxwax2EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_GC63Qax2EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_85nJYax1EeOYl-8lulj8AQ" iD="_85nJYKx1EeOYl-8lulj8AQ" associations="__Laz8Kx1EeOYl-8lulj8AQ __bxkIKx1EeOYl-8lulj8AQ" outgoingEdges="_9TwHsax1EeOYl-8lulj8AQ" incomingEdges="_85w6Yax1EeOYl-8lulj8AQ" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#__LGD0ax1EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#__bWGUax1EeOYl-8lulj8AQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_6iM_YaxwEeOYl-8lulj8AQ" iD="_6iM_YKxwEeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7BQS4axwEeOYl-8lulj8AQ" iD="_7BQS4KxwEeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_qswz4ax0EeOYl-8lulj8AQ" iD="_qswz4Kx0EeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_64YG4ax0EeOYl-8lulj8AQ" iD="_64YG4Kx0EeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7Qfr8ax0EeOYl-8lulj8AQ" iD="_7Qfr8Kx0EeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_HgkWcax1EeOYl-8lulj8AQ" iD="_HgkWcKx1EeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_IB6wAax1EeOYl-8lulj8AQ" iD="_IB6wAKx1EeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_85w6Yax1EeOYl-8lulj8AQ" iD="_85w6YKx1EeOYl-8lulj8AQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_9TwHsax1EeOYl-8lulj8AQ" iD="_9TwHsKx1EeOYl-8lulj8AQ"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_lP8isaxwEeOYl-8lulj8AQ" iD="_lP8isKxwEeOYl-8lulj8AQ" name="Manual">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ovhA4KxwEeOYl-8lulj8AQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ovhA4axwEeOYl-8lulj8AQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tKsEUKxzEeOYl-8lulj8AQ" source="participant">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tKsEUaxzEeOYl-8lulj8AQ" key="users" value="examples\manuel"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tKsEUqxzEeOYl-8lulj8AQ" key="roles" value=""/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_1GhScaxzEeOYl-8lulj8AQ" iD="_1GhScKxzEeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1GhScqxzEeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GhSc6xzEeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GigkqxzEeOYl-8lulj8AQ" key="defaultDeclarationName" value="generaOrden1InitProcessRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GkVwKxzEeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/GeneraOrden/xform}initProcessRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_1GjHoKxzEeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1GjHoaxzEeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GjusKxzEeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_1ZcOdqxzEeOYl-8lulj8AQ" iD="_1ZcOdaxzEeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1ZcOd6xzEeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZcOeKxzEeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZeDqKxzEeOYl-8lulj8AQ" key="defaultDeclarationName" value="generaOrden1InitProcessResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1Zgf4KxzEeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/GeneraOrden/xform}initProcessResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_1ZeqsKxzEeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1ZfRwKxzEeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1Zf40KxzEeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_eBxvBqx0EeOYl-8lulj8AQ" iD="_eBxvBax0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eBxvB6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBxvCKx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBzkMKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1CreateTaskRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eB1ZYax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}createTaskRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_eB0LQKx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eB0yUKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eB1ZYKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_eQan8ax0EeOYl-8lulj8AQ" iD="_eQan8Kx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQan8qx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQan86x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQdEOKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1CreateTaskResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQgHgax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}createTaskResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_eQeSUKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQe5YKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQgHgKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ez03Aax0EeOYl-8lulj8AQ" iD="_ez03AKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ez03Aqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ez03A6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ez3TRqx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1NotifyTaskCompletionRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ez6Wkax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}notifyTaskCompletionRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ez4hYKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ez5IcKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ez6WkKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_fHHmcax0EeOYl-8lulj8AQ" iD="_fHHmcKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fHHmcqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHHmc6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHKCuKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="detalleProducto1NotifyTaskCompletionResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHNtEax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/DetalleProducto/xform}notifyTaskCompletionResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_fHLQ0Kx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fHMe8Kx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fHNtEKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_F1Nydqx2EeOYl-8lulj8AQ" iD="_F1Nydax2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F1Nyd6x2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1NyeKx2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1Q1wKx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="completaproceso1NotifyRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1T5Eax2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/completaproceso/xform}notifyRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_F1Rc0Kx2EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F1Sq8Kx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1T5EKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_GDQ1gax2EeOYl-8lulj8AQ" iD="_GDQ1gKx2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GDQ1gqx2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDQ1g6x2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDVuCKx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="completaproceso1NotifyResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDZYYax2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/completaproceso/xform}notifyResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_GDW8IKx2EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GDYKQKx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDZYYKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_zLyEGKxzEeOYl-8lulj8AQ" iD="_zLqvUaxzEeOYl-8lulj8AQ" associations="_1GjHoKxzEeOYl-8lulj8AQ _1ZeqsKxzEeOYl-8lulj8AQ" name="GeneraOrden-init request" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zLyEGaxzEeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zLyEGqxzEeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/GeneraOrden.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zLyEG6xzEeOYl-8lulj8AQ" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zLyEHKxzEeOYl-8lulj8AQ" key="factoryId" value="xform"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zLyEHaxzEeOYl-8lulj8AQ" key="taskType" value="init"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zLyEHqxzEeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zLyEH6xzEeOYl-8lulj8AQ" key="douri" value="project:///Formulario/GeneraOrden.xform.all.wsdl?invokerequestresponse={http://example.com/Formulario/GeneraOrden/xform}Process/initProcess"/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_1GL7QaxzEeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_1Y9GQaxzEeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_bVbdiKx0EeOYl-8lulj8AQ" iD="_bVThsKx0EeOYl-8lulj8AQ" associations="_eB0LQKx0EeOYl-8lulj8AQ _eQeSUKx0EeOYl-8lulj8AQ" outgoingEdges="_bVhkKqx0EeOYl-8lulj8AQ" name="DetalleProducto-create" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bVbdiax0EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVbdiqx0EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/DetalleProducto.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bVbdi6x0EeOYl-8lulj8AQ" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVbdjKx0EeOYl-8lulj8AQ" key="factoryId" value="xform"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVbdjax0EeOYl-8lulj8AQ" key="taskType" value="create-and-complete"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bVbdjqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVbdj6x0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVbdkKx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/DetalleProducto.xform.all.wsdl?wsdloperationbound={http://example.com/Formulario/DetalleProducto/xform}WorkflowSoapService/xformPort/createTask"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_eBZ7kax0EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_eQIUEax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_bVfu-Kx0EeOYl-8lulj8AQ" iD="_bVUv0Kx0EeOYl-8lulj8AQ" associations="_ez4hYKx0EeOYl-8lulj8AQ _fHLQ0Kx0EeOYl-8lulj8AQ" incomingEdges="_bVhkKqx0EeOYl-8lulj8AQ" name="DetalleProducto-complete" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bVfu-ax0EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVfu-qx0EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/DetalleProducto.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bVfu-6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVfu_Kx0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVfu_ax0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/DetalleProducto.xform.all.wsdl?invokerequestresponse={http://example.com/Formulario/DetalleProducto/xform}Process/notifyTaskCompletion"/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_ezijIax0EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_fGrhkax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_FbjVSKx2EeOYl-8lulj8AQ" iD="_Fbfq4Kx2EeOYl-8lulj8AQ" associations="_F1Rc0Kx2EeOYl-8lulj8AQ _GDW8IKx2EeOYl-8lulj8AQ" name="completaproceso-notify" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FbjVSax2EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FbjVSqx2EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/completaproceso.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FbjVS6x2EeOYl-8lulj8AQ" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FbjVTKx2EeOYl-8lulj8AQ" key="factoryId" value="xform"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FbjVTax2EeOYl-8lulj8AQ" key="taskType" value="notify"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FbjVTqx2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FbjVT6x2EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/completaproceso.xform.all.wsdl?wsdloperationbound={http://example.com/Formulario/completaproceso/xform}WorkflowSoapService/xformPort/notify"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_F0pxwax2EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_GC63Qax2EeOYl-8lulj8AQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_bVhkKqx0EeOYl-8lulj8AQ" iD="_bVWlAKx0EeOYl-8lulj8AQ" name=""/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_lm5qIaxwEeOYl-8lulj8AQ" iD="_lm5qIKxwEeOYl-8lulj8AQ" name="Claudo">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ohLC4KxwEeOYl-8lulj8AQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ohLC4axwEeOYl-8lulj8AQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uQxGIKx0EeOYl-8lulj8AQ" source="participant">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uQxtMKx0EeOYl-8lulj8AQ" key="users" value="examples\claudio"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uQxtMax0EeOYl-8lulj8AQ" key="roles" value=""/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_pnaVYax0EeOYl-8lulj8AQ" iD="_pnaVYKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pnaVYqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnaVY6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pndYuKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1CreateTaskRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnem0Kx0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}createTaskRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_pndYuax0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pnd_wKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnd_wax0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_qabtwax0EeOYl-8lulj8AQ" iD="_qabtwKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qabtwqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qabtw6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qaeKAqx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1CreateTaskResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qahNUax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}createTaskResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_qafYIKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qaf_MKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qahNUKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_rQCgEax0EeOYl-8lulj8AQ" iD="_rQCgEKx0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rQCgEqx0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQCgE6x0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQEVSKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1NotifyTaskCompletionRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQGKcax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}notifyTaskCompletionRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_rQE8UKx0EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rQFjYKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rQGKcKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_rflX9qx0EeOYl-8lulj8AQ" iD="_rflX9ax0EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rflX96x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rflX-Kx0EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfnNKKx0EeOYl-8lulj8AQ" key="defaultDeclarationName" value="recepcionPedido1NotifyTaskCompletionResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfppYax0EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/RecepcionPedido/xform}notifyTaskCompletionResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_rfobQKx0EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rfpCUKx0EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfppYKx0EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_pNeyd6x0EeOYl-8lulj8AQ" iD="_pNXdsKx0EeOYl-8lulj8AQ" associations="_pndYuax0EeOYl-8lulj8AQ _qafYIKx0EeOYl-8lulj8AQ" outgoingEdges="_pNkSCqx0EeOYl-8lulj8AQ" name="RecepcionPedido-create" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pNeyeKx0EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNeyeax0EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/RecepcionPedido.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pNeyeqx0EeOYl-8lulj8AQ" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNeye6x0EeOYl-8lulj8AQ" key="factoryId" value="xform"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNeyfKx0EeOYl-8lulj8AQ" key="taskType" value="create-and-complete"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pNeyfax0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNeyfqx0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNeyf6x0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/RecepcionPedido.xform.all.wsdl?wsdloperationbound={http://example.com/Formulario/RecepcionPedido/xform}WorkflowSoapService/xformPort/createTask"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_pnDwEax0EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_qaKoAax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_pNhOuKx0EeOYl-8lulj8AQ" iD="_pNYr0Kx0EeOYl-8lulj8AQ" associations="_rQE8UKx0EeOYl-8lulj8AQ _rfobQKx0EeOYl-8lulj8AQ" incomingEdges="_pNkSCqx0EeOYl-8lulj8AQ" name="RecepcionPedido-complete" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pNhOuax0EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNhOuqx0EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/RecepcionPedido.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pNhOu6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNhOvKx0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNhOvax0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/RecepcionPedido.xform.all.wsdl?invokerequestresponse={http://example.com/Formulario/RecepcionPedido/xform}Process/notifyTaskCompletion"/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_rPzPgax0EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_rfRO4ax0EeOYl-8lulj8AQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pNkSCqx0EeOYl-8lulj8AQ" iD="_pNZ58Kx0EeOYl-8lulj8AQ" name=""/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_l6vMIaxwEeOYl-8lulj8AQ" iD="_l6vMIKxwEeOYl-8lulj8AQ" name="Walter">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oUG3QKxwEeOYl-8lulj8AQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oUG3QaxwEeOYl-8lulj8AQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CQHwgKx1EeOYl-8lulj8AQ" source="participant">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CQIXkKx1EeOYl-8lulj8AQ" key="users" value="examples\walter"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CQIXkax1EeOYl-8lulj8AQ" key="roles" value=""/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_EpkUIax1EeOYl-8lulj8AQ" iD="_EpkUIKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EpkUIqx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpkUI6x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Epk7OKx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1CreateTaskRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpliQqx1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}createTaskRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Epk7Oax1EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EpliQKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpliQax1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_E624cax1EeOYl-8lulj8AQ" iD="_E624cKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E624cqx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E624c6x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E64Gkax1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1CreateTaskResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E65Usax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}createTaskResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_E64Gkqx1EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E64toKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E65UsKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_Fkiuoax1EeOYl-8lulj8AQ" iD="_FkiuoKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Fkiuoqx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Fkiuo6x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Fklx8qx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1NotifyTaskCompletionRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FknnIax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}notifyTaskCompletionRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_FkmZAKx1EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FknAEKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FknnIKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_F6VYcax1EeOYl-8lulj8AQ" iD="_F6VYcKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F6VYcqx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6VYc6x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6WmmKx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="desicion1NotifyTaskCompletionResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6ZC0ax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://example.com/Formulario/desicion/xform}notifyTaskCompletionResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_F6XNoKx1EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F6YbwKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6ZC0Kx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_6GhzQax0EeOYl-8lulj8AQ" iD="_6Gev4ax0EeOYl-8lulj8AQ" associations="_Epk7Oax1EeOYl-8lulj8AQ _E64Gkqx1EeOYl-8lulj8AQ" outgoingEdges="_6Gk2iqx0EeOYl-8lulj8AQ" name="desicion-create" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6GhzQqx0EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GhzQ6x0EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/desicion.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6GhzRKx0EeOYl-8lulj8AQ" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GhzRax0EeOYl-8lulj8AQ" key="factoryId" value="xform"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GhzRqx0EeOYl-8lulj8AQ" key="taskType" value="create-and-complete"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6GhzR6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GhzSKx0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GhzSax0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/desicion.xform.all.wsdl?wsdloperationbound={http://example.com/Formulario/desicion/xform}WorkflowSoapService/xformPort/createTask"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_EpKEcax1EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_E6o2Aax1EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_6GjoaKx0EeOYl-8lulj8AQ" iD="_6GfW8Kx0EeOYl-8lulj8AQ" associations="_FkmZAKx1EeOYl-8lulj8AQ _F6XNoKx1EeOYl-8lulj8AQ" incomingEdges="_6Gk2iqx0EeOYl-8lulj8AQ" name="desicion-complete" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6Gjoaax0EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6Gjoaqx0EeOYl-8lulj8AQ" key="projectRelativePath" value="Formulario/desicion.xform"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6Gjoa6x0EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GjobKx0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6Gjobax0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/desicion.xform.all.wsdl?invokerequestresponse={http://example.com/Formulario/desicion/xform}Process/notifyTaskCompletion"/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_FkSP8ax1EeOYl-8lulj8AQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_F5z0Aax1EeOYl-8lulj8AQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_6Gk2iqx0EeOYl-8lulj8AQ" iD="_6Gf-AKx0EeOYl-8lulj8AQ" name=""/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_Asc-Uax1EeOYl-8lulj8AQ" iD="_Asc-UKx1EeOYl-8lulj8AQ" name="BD">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BUxikKx1EeOYl-8lulj8AQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BUxikax1EeOYl-8lulj8AQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="__LgThKx1EeOYl-8lulj8AQ" iD="__LgTg6x1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__LgThax1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__LgThqx1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__Lg6mKx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="nsSelectRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__Lhhoqx1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectInput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="__Lg6max1EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__LhhoKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__Lhhoax1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="__bmlAax1EeOYl-8lulj8AQ" iD="__bmlAKx1EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__bmlAqx1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__bmlA6x1EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__boaMqx1EeOYl-8lulj8AQ" key="defaultDeclarationName" value="nsSelectResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__bpoUax1EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectOutput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="__boaM6x1EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__bpBQKx1EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__bpoUKx1EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_BL76Nqx2EeOYl-8lulj8AQ" iD="_BL76Nax2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BL76N6x2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BL76OKx2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BL9IWKx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="insertarInsertarRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BL-9gax2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarInput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_BL9vYKx2EeOYl-8lulj8AQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BL-WcKx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BL-9gKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_BdY2kax2EeOYl-8lulj8AQ" iD="_BdY2kKx2EeOYl-8lulj8AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BdY2kqx2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BdY2k6x2EeOYl-8lulj8AQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BdbS2Kx2EeOYl-8lulj8AQ" key="defaultDeclarationName" value="insertarInsertarResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bde9Max2EeOYl-8lulj8AQ" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarOutput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Bdcg8Kx2EeOYl-8lulj8AQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BddvEKx2EeOYl-8lulj8AQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bde9MKx2EeOYl-8lulj8AQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_7dNc2Kx1EeOYl-8lulj8AQ" iD="_7dJycKx1EeOYl-8lulj8AQ" associations="__Lg6max1EeOYl-8lulj8AQ __boaM6x1EeOYl-8lulj8AQ" name="Provide-Service-Select" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7dNc2ax1EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7dNc2qx1EeOYl-8lulj8AQ" key="douri" value="project:///SQL/Select.sql/Select.sql.wsdl?wsdloperationbound={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectService/SelectPort/Select"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7dNc26x1EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7dNc3Kx1EeOYl-8lulj8AQ" key="projectRelativePath" value="SQL/Select.sql/Select.sql"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#__LGD0ax1EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#__bWGUax1EeOYl-8lulj8AQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_AeiouKx2EeOYl-8lulj8AQ" iD="_AeflYKx2EeOYl-8lulj8AQ" associations="_BL9vYKx2EeOYl-8lulj8AQ _Bdcg8Kx2EeOYl-8lulj8AQ" name="Provide-Service-Insertar" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Aeiouax2EeOYl-8lulj8AQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Aeiouqx2EeOYl-8lulj8AQ" key="douri" value="project:///SQL/insertar.sql/insertar.sql.wsdl?wsdloperationbound={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarService/insertarPort/insertar"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Aeiou6x2EeOYl-8lulj8AQ" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AeiovKx2EeOYl-8lulj8AQ" key="projectRelativePath" value="SQL/insertar.sql/insertar.sql"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_BLVdQax2EeOYl-8lulj8AQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_BdMCQax2EeOYl-8lulj8AQ"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_1GL7QaxzEeOYl-8lulj8AQ" iD="_1GL7QKxzEeOYl-8lulj8AQ" source="_zLyEGKxzEeOYl-8lulj8AQ" target="_j6X24axwEeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1GQzwKxzEeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1GQzwaxzEeOYl-8lulj8AQ" key="douri" value="project:///Formulario/GeneraOrden.xform.all.wsdl?messageForOperation={http://example.com/Formulario/GeneraOrden/xform}Process/initProcess/input/initProcessRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_1Y9GQaxzEeOYl-8lulj8AQ" iD="_1Y9GQKxzEeOYl-8lulj8AQ" source="_j6X24axwEeOYl-8lulj8AQ" target="_zLyEGKxzEeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1ZCl0KxzEeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1ZCl0axzEeOYl-8lulj8AQ" key="douri" value="project:///Formulario/GeneraOrden.xform.all.wsdl?messageForOperation={http://example.com/Formulario/GeneraOrden/xform}Process/initProcess/output/initProcessResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_eBZ7kax0EeOYl-8lulj8AQ" iD="_eBZ7kKx0EeOYl-8lulj8AQ" source="_6GRRUaxwEeOYl-8lulj8AQ" target="_bVbdiKx0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eBe0EKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBe0Eax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBe0Eqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/DetalleProducto.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/DetalleProducto/xform}WorkflowSoapService/xformPort/createTask/input/createTaskRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_eQIUEax0EeOYl-8lulj8AQ" iD="_eQIUEKx0EeOYl-8lulj8AQ" source="_bVbdiKx0EeOYl-8lulj8AQ" target="_6GRRUaxwEeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQNzoKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQNzoax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQNzoqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/DetalleProducto.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/DetalleProducto/xform}WorkflowSoapService/xformPort/createTask/output/createTaskResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_ezijIax0EeOYl-8lulj8AQ" iD="_ezijIKx0EeOYl-8lulj8AQ" source="_bVfu-Kx0EeOYl-8lulj8AQ" target="_6iG4waxwEeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ezm0kKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ezm0kax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ezm0kqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/DetalleProducto.xform.all.wsdl?messageForOperation={http://example.com/Formulario/DetalleProducto/xform}Process/notifyTaskCompletion/input/notifyTaskCompletionRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_fGrhkax0EeOYl-8lulj8AQ" iD="_fGrhkKx0EeOYl-8lulj8AQ" source="_6iG4waxwEeOYl-8lulj8AQ" target="_bVfu-Kx0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fGyPQKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fGyPQax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fGyPQqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/DetalleProducto.xform.all.wsdl?messageForOperation={http://example.com/Formulario/DetalleProducto/xform}Process/notifyTaskCompletion/output/notifyTaskCompletionResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_pnDwEax0EeOYl-8lulj8AQ" iD="_pnDwEKx0EeOYl-8lulj8AQ" source="_7BKMQaxwEeOYl-8lulj8AQ" target="_pNeyd6x0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pnGzYKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnGzYax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pnGzYqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/RecepcionPedido.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/RecepcionPedido/xform}WorkflowSoapService/xformPort/createTask/input/createTaskRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_qaKoAax0EeOYl-8lulj8AQ" iD="_qaKoAKx0EeOYl-8lulj8AQ" source="_pNeyd6x0EeOYl-8lulj8AQ" target="_7BKMQaxwEeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qaPggKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qaPggax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qaPggqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/RecepcionPedido.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/RecepcionPedido/xform}WorkflowSoapService/xformPort/createTask/output/createTaskResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_rPzPgax0EeOYl-8lulj8AQ" iD="_rPzPgKx0EeOYl-8lulj8AQ" source="_pNhOuKx0EeOYl-8lulj8AQ" target="_qso4Eax0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rP254Kx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rP254ax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rP254qx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/RecepcionPedido.xform.all.wsdl?messageForOperation={http://example.com/Formulario/RecepcionPedido/xform}Process/notifyTaskCompletion/input/notifyTaskCompletionRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_rfRO4ax0EeOYl-8lulj8AQ" iD="_rfRO4Kx0EeOYl-8lulj8AQ" source="_qso4Eax0EeOYl-8lulj8AQ" target="_pNhOuKx0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rfUSMKx0EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfUSMax0EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfUSMqx0EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/RecepcionPedido.xform.all.wsdl?messageForOperation={http://example.com/Formulario/RecepcionPedido/xform}Process/notifyTaskCompletion/output/notifyTaskCompletionResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_EpKEcax1EeOYl-8lulj8AQ" iD="_EpKEcKx1EeOYl-8lulj8AQ" source="_64PkAax0EeOYl-8lulj8AQ" target="_6GhzQax0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EpNHwKx1EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpNHwax1EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpNHwqx1EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/desicion.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/desicion/xform}WorkflowSoapService/xformPort/createTask/input/createTaskRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_E6o2Aax1EeOYl-8lulj8AQ" iD="_E6o2AKx1EeOYl-8lulj8AQ" source="_6GhzQax0EeOYl-8lulj8AQ" target="_64PkAax0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E6tHcKx1EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E6tHcax1EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E6tHcqx1EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/desicion.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/desicion/xform}WorkflowSoapService/xformPort/createTask/output/createTaskResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_FkSP8ax1EeOYl-8lulj8AQ" iD="_FkSP8Kx1EeOYl-8lulj8AQ" source="_6GjoaKx0EeOYl-8lulj8AQ" target="_7QXJEax0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FkV6UKx1EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FkV6Uax1EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FkV6Uqx1EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/desicion.xform.all.wsdl?messageForOperation={http://example.com/Formulario/desicion/xform}Process/notifyTaskCompletion/input/notifyTaskCompletionRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_F5z0Aax1EeOYl-8lulj8AQ" iD="_F5z0AKx1EeOYl-8lulj8AQ" source="_7QXJEax0EeOYl-8lulj8AQ" target="_6GjoaKx0EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F55TkKx1EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F55Tkax1EeOYl-8lulj8AQ" key="partnerLinkTypeKey" value="WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F55Tkqx1EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/desicion.xform.all.wsdl?messageForOperation={http://example.com/Formulario/desicion/xform}Process/notifyTaskCompletion/output/notifyTaskCompletionResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="__LGD0ax1EeOYl-8lulj8AQ" iD="__LGD0Kx1EeOYl-8lulj8AQ" source="_85nJYax1EeOYl-8lulj8AQ" target="_7dNc2Kx1EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__LJHIKx1EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__LJHIax1EeOYl-8lulj8AQ" key="douri" value="project:///SQL/Select.sql/Select.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectService/SelectPort/Select/input/SelectRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="__bWGUax1EeOYl-8lulj8AQ" iD="__bWGUKx1EeOYl-8lulj8AQ" source="_7dNc2Kx1EeOYl-8lulj8AQ" target="_85nJYax1EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__baXwKx1EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__baXwax1EeOYl-8lulj8AQ" key="douri" value="project:///SQL/Select.sql/Select.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:examenfinal:selectservice}SelectService/SelectPort/Select/output/SelectResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_BLVdQax2EeOYl-8lulj8AQ" iD="_BLVdQKx2EeOYl-8lulj8AQ" source="_HgbMgax1EeOYl-8lulj8AQ" target="_AeiouKx2EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BLeAIKx2EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLeAIax2EeOYl-8lulj8AQ" key="douri" value="project:///SQL/insertar.sql/insertar.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarService/insertarPort/insertar/input/insertarRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_BdMCQax2EeOYl-8lulj8AQ" iD="_BdMCQKx2EeOYl-8lulj8AQ" source="_AeiouKx2EeOYl-8lulj8AQ" target="_HgbMgax1EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BdPsoKx2EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BdPsoax2EeOYl-8lulj8AQ" key="douri" value="project:///SQL/insertar.sql/insertar.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:examenfinal:insertarservice}insertarService/insertarPort/insertar/output/insertarResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_F0pxwax2EeOYl-8lulj8AQ" iD="_F0pxwKx2EeOYl-8lulj8AQ" source="_IBw_Aax1EeOYl-8lulj8AQ" target="_FbjVSKx2EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F0v4YKx2EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F0v4Yax2EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/completaproceso.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/completaproceso/xform}WorkflowSoapService/xformPort/notify/input/notifyRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_GC63Qax2EeOYl-8lulj8AQ" iD="_GC63QKx2EeOYl-8lulj8AQ" source="_FbjVSKx2EeOYl-8lulj8AQ" target="_IBw_Aax1EeOYl-8lulj8AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GDAW0Kx2EeOYl-8lulj8AQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GDAW0ax2EeOYl-8lulj8AQ" key="douri" value="project:///Formulario/completaproceso.xform.all.wsdl?messageForBoundOperation={http://example.com/Formulario/completaproceso/xform}WorkflowSoapService/xformPort/notify/output/notifyResponse"/>
+    </eAnnotations>
+  </messages>
+</bpmn:BpmnDiagram>

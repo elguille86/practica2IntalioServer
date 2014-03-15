@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xhtml:html xmlns:f="http://orbeon.org/oxf/xml/formatting" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fe="http://example.com/Formulario/RecepcionPedido/xform" xmlns:xxforms="http://orbeon.org/oxf/xml/xforms">
+  <xhtml:head>
+    <xhtml:style type="text/css" id="intalio-fe-xforms" xml:space="preserve">#xforms_cntrl_Fecha_Estado_Revicion {position : absolute; top : 165px; left : 315px; width : 270px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Fecha_Estado_Revicion input {width : 147px; height : 19px}
+#xforms_cntrl_Estado {position : absolute; top : 165px; left : 90px; width : 150px; height : 29px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Estado select {width : 109px; height : 21px}
+#xforms_cntrl_Total_Pedido {position : absolute; top : 120px; left : 90px; width : 285px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Total_Pedido input {width : 208px; height : 19px}
+#xforms_cntrl_Codigo_Producto {position : absolute; top : 75px; left : 75px; width : 300px; height : 27px; margin : 0px; padding : 0px;}
+#xforms_cntrl_Codigo_Producto input {width : 206px; height : 19px}
+#xforms_cntrl_Recepcion_de_Pedido {position : absolute; top : 30px; left : 150px; width : 225px; height : 30px; margin : 0px; padding : 0px;}
+</xhtml:style>
+    <xforms:model schema="RecepcionPedido.xform.xsd">
+      <!-- Task Input -->
+      <xforms:instance id="taskinput">
+        <fe:input>
+          <Fecha_Estado_Revicion xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Estado xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Total_Pedido xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Codigo_Producto xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Recepcion_de_Pedido xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+        </fe:input>
+      </xforms:instance>
+      <!-- Task metadata - used only for People Initiating Processes Task forms -->
+      <xforms:instance id="taskmetadata">
+        <taskmetadata/>
+      </xforms:instance>
+      <!-- Task Output -->
+      <xforms:instance id="taskoutput">
+        <fe:output>
+          <Fecha_Estado_Revicion xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Estado xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Total_Pedido xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Codigo_Producto xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+          <Recepcion_de_Pedido xmlns="http://example.com/Formulario/RecepcionPedido/xform"/>
+        </fe:output>
+      </xforms:instance>
+      <xforms:action ev:event="xforms-ready">
+        <xforms:action xforms:if="string(instance('taskoutput')/@saved) != 'true'">
+          <xforms:setvalue ref="instance('taskoutput')/fe:Fecha_Estado_Revicion" value="instance('taskinput')/fe:Fecha_Estado_Revicion"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:Estado" value="instance('taskinput')/fe:Estado"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:Total_Pedido" value="instance('taskinput')/fe:Total_Pedido"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:Codigo_Producto" value="instance('taskinput')/fe:Codigo_Producto"/>
+          <xforms:setvalue ref="instance('taskoutput')/fe:Recepcion_de_Pedido" value="instance('taskinput')/fe:Recepcion_de_Pedido"/>
+        </xforms:action>
+      </xforms:action>
+    </xforms:model>
+  </xhtml:head>
+  <xhtml:body>
+    <xhtml:div id="intalio-bpms-form">
+      <xhtml:div id="xforms_cntrl_Fecha_Estado_Revicion">
+        <xforms:input ref="instance('taskoutput')/fe:Fecha_Estado_Revicion">
+          <xforms:label>Fecha Estado Revicion :</xforms:label>
+        </xforms:input>
+      </xhtml:div>
+      <xhtml:div id="xforms_cntrl_Estado">
+        <xforms:select1 appearance="minimal" ref="instance('taskoutput')/fe:Estado">
+          <xforms:label>Estado : </xforms:label>
+          <xforms:item>
+            <xforms:label>SELECT</xforms:label>
+            <xforms:value/>
+          </xforms:item>
+          <xforms:item>
+            <xforms:label>verificado</xforms:label>
+            <xforms:value>verificado</xforms:value>
+          </xforms:item>
+          <xforms:item>
+            <xforms:label>incorrecto</xforms:label>
+            <xforms:value>incorrecto</xforms:value>
+          </xforms:item>
+        </xforms:select1>
+      </xhtml:div>
+      <xhtml:div id="xforms_cntrl_Total_Pedido">
+        <xforms:input ref="instance('taskoutput')/fe:Total_Pedido">
+          <xforms:label>Total Pedido : </xforms:label>
+        </xforms:input>
+      </xhtml:div>
+      <xhtml:div id="xforms_cntrl_Codigo_Producto">
+        <xforms:input ref="instance('taskoutput')/fe:Codigo_Producto">
+          <xforms:label>Codigo Producto :</xforms:label>
+        </xforms:input>
+      </xhtml:div>
+      <xhtml:div id="xforms_cntrl_Recepcion_de_Pedido">
+        <xforms:output ref="instance('taskoutput')/fe:Recepcion_de_Pedido">
+          <xforms:label>Recepcion de Pedido</xforms:label>
+        </xforms:output>
+      </xhtml:div>
+    </xhtml:div>
+  </xhtml:body>
+</xhtml:html>

@@ -1,0 +1,359 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:RecepcionPedido1="http://example.com/Formulario/RecepcionPedido/xform" xmlns:ns="urn:intalio.com:connectors:database:examenfinal:selectservice" xmlns:DetalleProducto1="http://example.com/Formulario/DetalleProducto/xform" xmlns:completaproceso="http://example.com/Formulario/completaproceso/xform/attachments" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RecepcionPedido="http://example.com/Formulario/RecepcionPedido/xform/attachments" xmlns:desicion1="http://example.com/Formulario/desicion/xform" xmlns:Manual="http://thisdiagram/Manual" xmlns:GeneraOrden="http://example.com/Formulario/GeneraOrden/xform/attachments" xmlns:DetalleProducto="http://example.com/Formulario/DetalleProducto/xform/attachments" xmlns:this="http://thisdiagram/Servidor" xmlns:diag="http://thisdiagram" xmlns:desicion="http://example.com/Formulario/desicion/xform/attachments" xmlns:completaproceso1="http://example.com/Formulario/completaproceso/xform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:insertar="urn:intalio.com:connectors:database:examenfinal:insertarservice" xmlns:GeneraOrden1="http://example.com/Formulario/GeneraOrden/xform" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Servidor">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/RecepcionPedido/xform" bpdm:prefix="RecepcionPedido1" bpdm:comment="contrib=&apos;project:///Formulario/RecepcionPedido.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:examenfinal:selectservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///SQL/Select.sql/Select.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/DetalleProducto/xform" bpdm:prefix="DetalleProducto1" bpdm:comment="contrib=&apos;project:///Formulario/DetalleProducto.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/completaproceso/xform/attachments" bpdm:prefix="completaproceso" bpdm:comment="contrib=&apos;project:///Formulario/completaproceso.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/RecepcionPedido/xform/attachments" bpdm:prefix="RecepcionPedido" bpdm:comment="contrib=&apos;project:///Formulario/RecepcionPedido.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/desicion/xform" bpdm:prefix="desicion1" bpdm:comment="contrib=&apos;project:///Formulario/desicion.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Manual" bpdm:prefix="Manual" bpdm:comment="contrib=&apos;partner-pool:///_lP8isKxwEeOYl-8lulj8AQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/GeneraOrden/xform/attachments" bpdm:prefix="GeneraOrden" bpdm:comment="contrib=&apos;project:///Formulario/GeneraOrden.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/DetalleProducto/xform/attachments" bpdm:prefix="DetalleProducto" bpdm:comment="contrib=&apos;project:///Formulario/DetalleProducto.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Servidor" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_lP8isKxwEeOYl-8lulj8AQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/desicion/xform/attachments" bpdm:prefix="desicion" bpdm:comment="contrib=&apos;project:///Formulario/desicion.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/completaproceso/xform" bpdm:prefix="completaproceso1" bpdm:comment="contrib=&apos;project:///Formulario/completaproceso.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:examenfinal:insertarservice" bpdm:prefix="insertar" bpdm:comment="contrib=&apos;project:///SQL/insertar.sql/insertar.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://example.com/Formulario/GeneraOrden/xform" bpdm:prefix="GeneraOrden1" bpdm:comment="contrib=&apos;project:///Formulario/GeneraOrden.xform.all.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:service name="WFmagic_pNXdsKx0EeOYl-8lulj8AQService">
+                <wsdl:port name="Servidor_for_ClaudoForThePortTypeProcessPort" binding="this:WFmagic_pNXdsKx0EeOYl-8lulj8AQServiceBinding">
+                    <address location="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Claudo/WFmagic_pNXdsKx0EeOYl-8lulj8AQ"/>
+                </wsdl:port>
+            </wsdl:service>
+            <bpel:binding name="WFmagic_pNXdsKx0EeOYl-8lulj8AQServiceBinding" type="RecepcionPedido1:Process" bpdm:isSynchronized="true"/>
+            <wsdl:service name="WFmagic_6Gev4ax0EeOYl-8lulj8AQService">
+                <wsdl:port name="Servidor_for_WalterForThePortTypeProcessPort" binding="this:WFmagic_6Gev4ax0EeOYl-8lulj8AQServiceBinding">
+                    <address location="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Walter/WFmagic_6Gev4ax0EeOYl-8lulj8AQ"/>
+                </wsdl:port>
+            </wsdl:service>
+            <bpel:binding name="WFmagic_6Gev4ax0EeOYl-8lulj8AQServiceBinding" type="desicion1:Process" bpdm:isSynchronized="true"/>
+            <wsdl:service name="WFmagic_bVThsKx0EeOYl-8lulj8AQService">
+                <wsdl:port name="Servidor_for_ManualForThePortTypeProcessPort" binding="this:WFmagic_bVThsKx0EeOYl-8lulj8AQServiceBinding">
+                    <address location="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Manual/WFmagic_bVThsKx0EeOYl-8lulj8AQ"/>
+                </wsdl:port>
+            </wsdl:service>
+            <bpel:binding name="WFmagic_bVThsKx0EeOYl-8lulj8AQServiceBinding" type="DetalleProducto1:Process" bpdm:isSynchronized="true"/>
+            <wsdl:service name="ManualAndServidorForPortTypeProcessPlkService">
+                <wsdl:port name="Servidor_for_ManualPort" binding="this:ManualAndServidorForPortTypeProcessPlkServiceBinding">
+                    <address location="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Manual/ManualAndServidorForPortTypeProcessPlk"/>
+                </wsdl:port>
+            </wsdl:service>
+            <bpel:binding name="ManualAndServidorForPortTypeProcessPlkServiceBinding" type="GeneraOrden1:Process" bpdm:isSynchronized="true"/>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_lP8isKxwEeOYl-8lulj8AQ" bpdm:label="Manual"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/GeneraOrden.xform.all.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/GeneraOrden.xform.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/DetalleProducto.xform.all.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/DetalleProducto.xform.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_lm5qIKxwEeOYl-8lulj8AQ" bpdm:label="Claudo"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/RecepcionPedido.xform.all.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/RecepcionPedido.xform.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_l6vMIKxwEeOYl-8lulj8AQ" bpdm:label="Walter"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/desicion.xform.all.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/desicion.xform.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_Asc-UKx1EeOYl-8lulj8AQ" bpdm:label="BD"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/Select.sql/Select.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/Select.sql/Select.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/insertar.sql/insertar.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///SQL/insertar.sql/insertar.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/completaproceso.xform.all.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Formulario/completaproceso.xform.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Servidor" bpdm:ID="_j6XP0KxwEeOYl-8lulj8AQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_bVThsKx0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Servidor_for_ManualForThePortTypeProcess" bpdm:enableSharing="false" bpdm:providedService="this:WFmagic_bVThsKx0EeOYl-8lulj8AQService" bpdm:providedPort="Servidor_for_ManualForThePortTypeProcessPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Manual/WFmagic_bVThsKx0EeOYl-8lulj8AQ" bpdm:providedIsDefault="true" partnerRole="Manual_for_ServidorForXformPort" bpdm:invokedService="DetalleProducto1:WorkflowSoapService" bpdm:invokedPort="xformPort" bpdm:invokedSOAPAddress="http://localhost:8080/fds/workflow/xform" bpdm:invokedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_6iG4wKxwEeOYl-8lulj8AQ, _j6XP0KxwEeOYl-8lulj8AQ:_6GRRUKxwEeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_lP8isKxwEeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_pNXdsKx0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Servidor_for_ClaudoForThePortTypeProcess" bpdm:enableSharing="false" bpdm:providedService="this:WFmagic_pNXdsKx0EeOYl-8lulj8AQService" bpdm:providedPort="Servidor_for_ClaudoForThePortTypeProcessPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Claudo/WFmagic_pNXdsKx0EeOYl-8lulj8AQ" bpdm:providedIsDefault="true" partnerRole="Claudo_for_ServidorForXformPort" bpdm:invokedService="RecepcionPedido1:WorkflowSoapService" bpdm:invokedPort="xformPort" bpdm:invokedSOAPAddress="http://localhost:8080/fds/workflow/xform" bpdm:invokedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_qso4EKx0EeOYl-8lulj8AQ, _j6XP0KxwEeOYl-8lulj8AQ:_7BKMQKxwEeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_lm5qIKxwEeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="manualAndServidorForPortTypeProcessPlkVar" partnerLinkType="diag:ManualAndServidorForPortTypeProcessPlk" myRole="Servidor_for_Manual" bpdm:enableSharing="false" bpdm:providedService="this:ManualAndServidorForPortTypeProcessPlkService" bpdm:providedPort="Servidor_for_ManualPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Manual/ManualAndServidorForPortTypeProcessPlk" bpdm:providedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_j6X24KxwEeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_lP8isKxwEeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" partnerLinkType="diag:WFmagic_6Gev4ax0EeOYl-8lulj8AQ" initializePartnerRole="no" myRole="Servidor_for_WalterForThePortTypeProcess" bpdm:enableSharing="false" bpdm:providedService="this:WFmagic_6Gev4ax0EeOYl-8lulj8AQService" bpdm:providedPort="Servidor_for_WalterForThePortTypeProcessPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Servidor/Walter/WFmagic_6Gev4ax0EeOYl-8lulj8AQ" bpdm:providedIsDefault="true" partnerRole="Walter_for_ServidorForXformPort" bpdm:invokedService="desicion1:WorkflowSoapService" bpdm:invokedPort="xformPort" bpdm:invokedSOAPAddress="http://localhost:8080/fds/workflow/xform" bpdm:invokedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_64PkAKx0EeOYl-8lulj8AQ, _j6XP0KxwEeOYl-8lulj8AQ:_7QXJEKx0EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_l6vMIKxwEeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="servidorAndBDForSelectPortPlkVar" partnerLinkType="diag:ServidorAndBDForSelectPortPlk" initializePartnerRole="yes" partnerRole="BD_for_Servidor" bpdm:invokedService="ns:SelectService" bpdm:invokedPort="SelectPort" bpdm:invokedSOAPAddress="http://localhost:8080/ode/processes/ExamenFinal/SQL/Select" bpdm:invokedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_85nJYKx1EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_Asc-UKx1EeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="servidorAndBDForInsertarPortPlkVar" partnerLinkType="diag:ServidorAndBDForInsertarPortPlk" initializePartnerRole="yes" partnerRole="BD_for_Servidor" bpdm:invokedService="insertar:insertarService" bpdm:invokedPort="insertarPort" bpdm:invokedSOAPAddress="http://localhost:8080/ode/processes/ExamenFinal/SQL/insertar" bpdm:invokedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_HgbMgKx1EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_Asc-UKx1EeOYl-8lulj8AQ"/>
+            <bpel:partnerLink name="manualAndServidorForXformPortPlkVar" partnerLinkType="diag:ManualAndServidorForXformPortPlk" initializePartnerRole="yes" partnerRole="Manual_for_Servidor" bpdm:invokedService="completaproceso1:WorkflowSoapService" bpdm:invokedPort="xformPort" bpdm:invokedSOAPAddress="http://localhost:8080/fds/workflow/xform" bpdm:invokedIsDefault="true" bpdm:clientTasks="_j6XP0KxwEeOYl-8lulj8AQ:_IBw_AKx1EeOYl-8lulj8AQ" bpdm:isManaged="true" bpdm:otherPoolId="_lP8isKxwEeOYl-8lulj8AQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="generaOrden1InitProcessRequestMsg" messageType="GeneraOrden1:initProcessRequest" bpdm:id="_1Glj4KxzEeOYl-8lulj8AQ" bpdm:messageIds="inc:_1GL7QKxzEeOYl-8lulj8AQ"/>
+            <bpel:variable name="generaOrden1InitProcessResponseMsg" messageType="GeneraOrden1:initProcessResponse" bpdm:id="_1ZXV8KxzEeOYl-8lulj8AQ" bpdm:messageIds=" out:_1Y9GQKxzEeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="GeneraOrden1:initProcessResponse" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="detalleProducto1CreateTaskRequestMsg" messageType="DetalleProducto1:createTaskRequest" binding="DetalleProducto1:WorkflowSoapBinding" operation="createTask" opMsgType="0" bpdm:id="_eBroYKx0EeOYl-8lulj8AQ" bpdm:messageIds=" out:_eBZ7kKx0EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="DetalleProducto1:createTaskRequest" bpdm:linkedPart="root" bpdm:binding="DetalleProducto1:WorkflowSoapBinding" bpdm:opMsgType="0" bpdm:operation="createTask"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="detalleProducto1CreateTaskResponseMsg" messageType="DetalleProducto1:createTaskResponse" binding="DetalleProducto1:WorkflowSoapBinding" operation="createTask" opMsgType="1" bpdm:id="_eQgulax0EeOYl-8lulj8AQ" bpdm:messageIds="inc:_eQIUEKx0EeOYl-8lulj8AQ"/>
+            <bpel:variable name="detalleProducto1NotifyTaskCompletionRequestMsg" messageType="DetalleProducto1:notifyTaskCompletionRequest" bpdm:id="_ez69pax0EeOYl-8lulj8AQ" bpdm:messageIds="inc:_ezijIKx0EeOYl-8lulj8AQ"/>
+            <bpel:variable name="detalleProducto1NotifyTaskCompletionResponseMsg" messageType="DetalleProducto1:notifyTaskCompletionResponse" bpdm:id="_fHA4wKx0EeOYl-8lulj8AQ" bpdm:messageIds=" out:_fGrhkKx0EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="DetalleProducto1:notifyTaskCompletionResponse" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="recepcionPedido1CreateTaskRequestMsg" messageType="RecepcionPedido1:createTaskRequest" binding="RecepcionPedido1:WorkflowSoapBinding" operation="createTask" opMsgType="0" bpdm:id="_pnRygKx0EeOYl-8lulj8AQ" bpdm:messageIds=" out:_pnDwEKx0EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="RecepcionPedido1:createTaskRequest" bpdm:linkedPart="root" bpdm:binding="RecepcionPedido1:WorkflowSoapBinding" bpdm:opMsgType="0" bpdm:operation="createTask"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="recepcionPedido1CreateTaskResponseMsg" messageType="RecepcionPedido1:createTaskResponse" binding="RecepcionPedido1:WorkflowSoapBinding" operation="createTask" opMsgType="1" bpdm:id="_qah0Zax0EeOYl-8lulj8AQ" bpdm:messageIds="inc:_qaKoAKx0EeOYl-8lulj8AQ"/>
+            <bpel:variable name="recepcionPedido1NotifyTaskCompletionRequestMsg" messageType="RecepcionPedido1:notifyTaskCompletionRequest" bpdm:id="_rQGxhax0EeOYl-8lulj8AQ" bpdm:messageIds="inc:_rPzPgKx0EeOYl-8lulj8AQ"/>
+            <bpel:variable name="recepcionPedido1NotifyTaskCompletionResponseMsg" messageType="RecepcionPedido1:notifyTaskCompletionResponse" bpdm:id="_rfbm8Kx0EeOYl-8lulj8AQ" bpdm:messageIds=" out:_rfRO4Kx0EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="RecepcionPedido1:notifyTaskCompletionResponse" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="desicion1CreateTaskRequestMsg" messageType="desicion1:createTaskRequest" binding="desicion1:WorkflowSoapBinding" operation="createTask" opMsgType="0" bpdm:id="_EpW4wKx1EeOYl-8lulj8AQ" bpdm:messageIds=" out:_EpKEcKx1EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="desicion1:createTaskRequest" bpdm:linkedPart="root" bpdm:binding="desicion1:WorkflowSoapBinding" bpdm:opMsgType="0" bpdm:operation="createTask"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="desicion1CreateTaskResponseMsg" messageType="desicion1:createTaskResponse" binding="desicion1:WorkflowSoapBinding" operation="createTask" opMsgType="1" bpdm:id="_E657xax1EeOYl-8lulj8AQ" bpdm:messageIds="inc:_E6o2AKx1EeOYl-8lulj8AQ"/>
+            <bpel:variable name="desicion1NotifyTaskCompletionRequestMsg" messageType="desicion1:notifyTaskCompletionRequest" bpdm:id="_FkoONax1EeOYl-8lulj8AQ" bpdm:messageIds="inc:_FkSP8Kx1EeOYl-8lulj8AQ"/>
+            <bpel:variable name="desicion1NotifyTaskCompletionResponseMsg" messageType="desicion1:notifyTaskCompletionResponse" bpdm:id="_F6Fg0Kx1EeOYl-8lulj8AQ" bpdm:messageIds=" out:_F5z0AKx1EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="desicion1:notifyTaskCompletionResponse" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsSelectRequestMsg" messageType="ns:SelectInput" binding="ns:SelectPortSoapBinding" operation="Select" opMsgType="0" bpdm:id="__LS4IKx1EeOYl-8lulj8AQ" bpdm:messageIds=" out:__LGD0Kx1EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:SelectInput" bpdm:linkedPart="parameters" bpdm:binding="ns:SelectPortSoapBinding" bpdm:opMsgType="0" bpdm:operation="Select"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsSelectResponseMsg" messageType="ns:SelectOutput" binding="ns:SelectPortSoapBinding" operation="Select" opMsgType="1" bpdm:id="__bqPZKx1EeOYl-8lulj8AQ" bpdm:messageIds="inc:__bWGUKx1EeOYl-8lulj8AQ"/>
+            <bpel:variable name="insertarInsertarRequestMsg" messageType="insertar:insertarInput" binding="insertar:insertarPortSoapBinding" operation="insertar" opMsgType="0" bpdm:id="_BLqNYKx2EeOYl-8lulj8AQ" bpdm:messageIds=" out:_BLVdQKx2EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="insertar:insertarInput" bpdm:linkedPart="parameters" bpdm:binding="insertar:insertarPortSoapBinding" bpdm:opMsgType="0" bpdm:operation="insertar"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="insertarInsertarResponseMsg" messageType="insertar:insertarOutput" binding="insertar:insertarPortSoapBinding" operation="insertar" opMsgType="1" bpdm:id="_BdfkRax2EeOYl-8lulj8AQ" bpdm:messageIds="inc:_BdMCQKx2EeOYl-8lulj8AQ"/>
+            <bpel:variable name="completaproceso1NotifyRequestMsg" messageType="completaproceso1:notifyRequest" binding="completaproceso1:WorkflowSoapBinding" operation="notify" opMsgType="0" bpdm:id="_F08FoKx2EeOYl-8lulj8AQ" bpdm:messageIds=" out:_F0pxwKx2EeOYl-8lulj8AQ">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="completaproceso1:notifyRequest" bpdm:linkedPart="root" bpdm:binding="completaproceso1:WorkflowSoapBinding" bpdm:opMsgType="0" bpdm:operation="notify"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="completaproceso1NotifyResponseMsg" messageType="completaproceso1:notifyResponse" binding="completaproceso1:WorkflowSoapBinding" operation="notify" opMsgType="1" bpdm:id="_GDZ_dax2EeOYl-8lulj8AQ" bpdm:messageIds="inc:_GC63QKx2EeOYl-8lulj8AQ"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="initProcess" partnerLink="manualAndServidorForPortTypeProcessPlkVar" portType="GeneraOrden1:Process" isMyRole="true" enableSharing="false" bpdm:label="Task" bpdm:ID="_j6X24KxwEeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="generaOrden1InitProcessRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="GeneraOrden1:initProcessRequest" bpdm:ID="_1GL7QKxzEeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="generaOrden1InitProcessResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="GeneraOrden1:initProcessResponse" bpdm:ID="_1Y9GQKxzEeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="Select" partnerLink="servidorAndBDForSelectPortPlkVar" portType="ns:SelectPort" isMyRole="false" enableSharing="false" bpdm:label="Task" bpdm:ID="_85nJYKx1EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$generaOrden1InitProcessRequestMsg.root/GeneraOrden1:taskOutput/GeneraOrden1:output/GeneraOrden1:group27/GeneraOrden1:Codigo_Producto</bpel:from>
+                        <bpel:to>$nsSelectRequestMsg.parameters/ns:execute/ns:parameters/ns:cod_producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="13433114" targetPath="$nsSelectRequestMsg.parameters/ns:execute/ns:parameters/ns:cod_producto" targetedBy="10678592-arg0"></mapper:vertice>
+  <mapper:vertice id="10678592" sourcePath="$generaOrden1InitProcessRequestMsg.root/GeneraOrden1:taskOutput/GeneraOrden1:output/GeneraOrden1:group27/GeneraOrden1:Codigo_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsSelectRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:SelectInput" bpdm:binding="ns:SelectPortSoapBinding" bpdm:ID="__LGD0Kx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsSelectResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:SelectOutput" bpdm:binding="ns:SelectPortSoapBinding" bpdm:ID="__bWGUKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="nsSelectFault" msgFaultTypeQname="ns:SelectFault"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="createTask" partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" portType="DetalleProducto1:Workflow" isMyRole="false" enableSharing="false" bpdm:label="Task" bpdm:ID="_6GRRUKxwEeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:cod_producto</bpel:from>
+                        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Codigo_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="26709561" targetPath="$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Codigo_Producto" targetedBy="33549358-arg0"></mapper:vertice>
+  <mapper:vertice id="33549358" sourcePath="$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:cod_producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:nom_producto</bpel:from>
+                        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="24238470" targetPath="$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto" targetedBy="15260591-arg0"></mapper:vertice>
+  <mapper:vertice id="15260591" sourcePath="$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:nom_producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:pre_producto</bpel:from>
+                        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Precio_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1284759" targetPath="$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Precio_Producto" targetedBy="89093-arg0"></mapper:vertice>
+  <mapper:vertice id="89093" sourcePath="$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:pre_producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:des_producto</bpel:from>
+                        <bpel:to>$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Descripcion</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="6526213" targetPath="$detalleProducto1CreateTaskRequestMsg.root/DetalleProducto1:taskInput/DetalleProducto1:input/DetalleProducto1:group116/DetalleProducto1:Descripcion" targetedBy="25132607-arg0"></mapper:vertice>
+  <mapper:vertice id="25132607" sourcePath="$nsSelectResponseMsg.parameters/ns:rows/ns:row/ns:des_producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="detalleProducto1CreateTaskRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="DetalleProducto1:createTaskRequest" bpdm:binding="DetalleProducto1:WorkflowSoapBinding" bpdm:ID="_eBZ7kKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="detalleProducto1CreateTaskResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="DetalleProducto1:createTaskResponse" bpdm:binding="DetalleProducto1:WorkflowSoapBinding" bpdm:ID="_eQIUEKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="notifyTaskCompletion" partnerLink="wFmagic_bVThsKx0EeOYl-8lulj8AQPlkVar" portType="DetalleProducto1:Process" isMyRole="true" enableSharing="false" bpdm:label="Task" bpdm:ID="_6iG4wKxwEeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="detalleProducto1NotifyTaskCompletionRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="DetalleProducto1:notifyTaskCompletionRequest" bpdm:ID="_ezijIKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="detalleProducto1NotifyTaskCompletionResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="DetalleProducto1:notifyTaskCompletionResponse" bpdm:ID="_fGrhkKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="createTask" partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" portType="RecepcionPedido1:Workflow" isMyRole="false" enableSharing="false" bpdm:label="Task" bpdm:ID="_7BKMQKxwEeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Codigo_Producto</bpel:from>
+                        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskInput/RecepcionPedido1:input/RecepcionPedido1:Codigo_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="9582110" targetPath="$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskInput/RecepcionPedido1:input/RecepcionPedido1:Codigo_Producto" targetedBy="14056433-arg0"></mapper:vertice>
+  <mapper:vertice id="14056433" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Codigo_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Cantidad * $detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Precio_Producto</bpel:from>
+                        <bpel:to>$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskInput/RecepcionPedido1:input/RecepcionPedido1:Total_Pedido</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="14369363" targetPath="$recepcionPedido1CreateTaskRequestMsg.root/RecepcionPedido1:taskInput/RecepcionPedido1:input/RecepcionPedido1:Total_Pedido" targetedBy="25818073-arg0"></mapper:vertice>
+  <mapper:vertice id="25818073" dimension="213x24" location="484,74">
+    <mapper:value>(Cantidad * Precio_Producto)</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="13045113" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Cantidad" targetedBy="25818073-arg1"></mapper:vertice>
+  <mapper:vertice id="22145745" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Precio_Producto" targetedBy="25818073-arg2"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="recepcionPedido1CreateTaskRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="RecepcionPedido1:createTaskRequest" bpdm:binding="RecepcionPedido1:WorkflowSoapBinding" bpdm:ID="_pnDwEKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="recepcionPedido1CreateTaskResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="RecepcionPedido1:createTaskResponse" bpdm:binding="RecepcionPedido1:WorkflowSoapBinding" bpdm:ID="_qaKoAKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="notifyTaskCompletion" partnerLink="wFmagic_pNXdsKx0EeOYl-8lulj8AQPlkVar" portType="RecepcionPedido1:Process" isMyRole="true" enableSharing="false" bpdm:label="Task" bpdm:ID="_qso4EKx0EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="recepcionPedido1NotifyTaskCompletionRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="RecepcionPedido1:notifyTaskCompletionRequest" bpdm:ID="_rPzPgKx0EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="recepcionPedido1NotifyTaskCompletionResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="RecepcionPedido1:notifyTaskCompletionResponse" bpdm:ID="_rfRO4Kx0EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="createTask" partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Workflow" isMyRole="false" enableSharing="false" bpdm:label="Task" bpdm:ID="_64PkAKx0EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Estado</bpel:from>
+                        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskInput/desicion1:input/desicion1:Estado_Vendedor</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="3915220" targetPath="$desicion1CreateTaskRequestMsg.root/desicion1:taskInput/desicion1:input/desicion1:Estado_Vendedor" targetedBy="19088953-arg0"></mapper:vertice>
+  <mapper:vertice id="19088953" sourcePath="$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Estado"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Codigo_Producto</bpel:from>
+                        <bpel:to>$desicion1CreateTaskRequestMsg.root/desicion1:taskInput/desicion1:input/desicion1:Codigo_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="29132747" targetPath="$desicion1CreateTaskRequestMsg.root/desicion1:taskInput/desicion1:input/desicion1:Codigo_Producto" targetedBy="24265433-arg0"></mapper:vertice>
+  <mapper:vertice id="24265433" sourcePath="$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Codigo_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="desicion1CreateTaskRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:createTaskRequest" bpdm:binding="desicion1:WorkflowSoapBinding" bpdm:ID="_EpKEcKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="desicion1CreateTaskResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:createTaskResponse" bpdm:binding="desicion1:WorkflowSoapBinding" bpdm:ID="_E6o2AKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="notifyTaskCompletion" partnerLink="wFmagic_6Gev4ax0EeOYl-8lulj8AQPlkVar" portType="desicion1:Process" isMyRole="true" enableSharing="false" bpdm:label="Task" bpdm:ID="_7QXJEKx0EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="desicion1NotifyTaskCompletionRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:notifyTaskCompletionRequest" bpdm:ID="_FkSP8Kx1EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="desicion1NotifyTaskCompletionResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="desicion1:notifyTaskCompletionResponse" bpdm:ID="_F5z0AKx1EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="insertar" partnerLink="servidorAndBDForInsertarPortPlkVar" portType="insertar:insertarPort" isMyRole="false" enableSharing="false" bpdm:label="Task" bpdm:ID="_HgbMgKx1EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:Codigo_Producto</bpel:from>
+                        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter0</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="18024747" targetPath="$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter0" targetedBy="27813379-arg0"></mapper:vertice>
+  <mapper:vertice id="27813379" sourcePath="$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:Codigo_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto</bpel:from>
+                        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter1</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="28865535" targetPath="$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter1" targetedBy="32077023-arg0"></mapper:vertice>
+  <mapper:vertice id="32077023" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Total_Pedido</bpel:from>
+                        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter2</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="33121453" targetPath="$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter2" targetedBy="19556001-arg0"></mapper:vertice>
+  <mapper:vertice id="19556001" sourcePath="$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Total_Pedido"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Fecha_Pedido</bpel:from>
+                        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter3</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="12046327" targetPath="$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter3" targetedBy="32460035-arg0"></mapper:vertice>
+  <mapper:vertice id="32460035" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Fecha_Pedido"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:EstadoGerente</bpel:from>
+                        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter5</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="33497823" targetPath="$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter5" targetedBy="12508556-arg0"></mapper:vertice>
+  <mapper:vertice id="12508556" sourcePath="$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:EstadoGerente"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Estado</bpel:from>
+                        <bpel:to>$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter4</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="30681425" targetPath="$insertarInsertarRequestMsg.parameters/insertar:execute/insertar:parameters/insertar:Parameter4" targetedBy="30155756-arg0"></mapper:vertice>
+  <mapper:vertice id="30155756" sourcePath="$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Estado"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="insertarInsertarRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="insertar:insertarInput" bpdm:binding="insertar:insertarPortSoapBinding" bpdm:ID="_BLVdQKx2EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="insertarInsertarResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="insertar:insertarOutput" bpdm:binding="insertar:insertarPortSoapBinding" bpdm:ID="_BdMCQKx2EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="nsinsertarFault" msgFaultTypeQname="insertar:insertarFault"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="notify" partnerLink="manualAndServidorForXformPortPlkVar" portType="completaproceso1:Workflow" isMyRole="false" enableSharing="false" bpdm:label="Task" bpdm:ID="_IBw_AKx1EeOYl-8lulj8AQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:Codigo_Producto</bpel:from>
+                        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Codigo_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="8579162" targetPath="$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Codigo_Producto" targetedBy="2328099-arg0"></mapper:vertice>
+  <mapper:vertice id="2328099" sourcePath="$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:Codigo_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:EstadoGerente</bpel:from>
+                        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Estado</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="26201649" targetPath="$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Estado" targetedBy="20147279-arg0"></mapper:vertice>
+  <mapper:vertice id="20147279" sourcePath="$desicion1NotifyTaskCompletionRequestMsg.root/desicion1:taskOutput/desicion1:output/desicion1:EstadoGerente"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto</bpel:from>
+                        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Nombre_Producto</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="28939588" targetPath="$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Nombre_Producto" targetedBy="5904169-arg0"></mapper:vertice>
+  <mapper:vertice id="5904169" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Nombre_Producto"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Total_Pedido</bpel:from>
+                        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Total</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="26856085" targetPath="$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Total" targetedBy="24400076-arg0"></mapper:vertice>
+  <mapper:vertice id="24400076" sourcePath="$recepcionPedido1NotifyTaskCompletionRequestMsg.root/RecepcionPedido1:taskOutput/RecepcionPedido1:output/RecepcionPedido1:Total_Pedido"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Fecha_Pedido</bpel:from>
+                        <bpel:to>$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Fecha_Pedido</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="29730884" targetPath="$completaproceso1NotifyRequestMsg.root/completaproceso1:input/completaproceso1:input/completaproceso1:Fecha_Pedido" targetedBy="5338489-arg0"></mapper:vertice>
+  <mapper:vertice id="5338489" sourcePath="$detalleProducto1NotifyTaskCompletionRequestMsg.root/DetalleProducto1:taskOutput/DetalleProducto1:output/DetalleProducto1:group116/DetalleProducto1:Fecha_Pedido"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="completaproceso1NotifyRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="completaproceso1:notifyRequest" bpdm:binding="completaproceso1:WorkflowSoapBinding" bpdm:ID="_F0pxwKx2EeOYl-8lulj8AQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="completaproceso1NotifyResponseMsg" bpdm:msgVarScopeId="_j6XP0KxwEeOYl-8lulj8AQ" bpdm:variableIsManaged="true" bpdm:messageType="completaproceso1:notifyResponse" bpdm:binding="completaproceso1:WorkflowSoapBinding" bpdm:ID="_GC63QKx2EeOYl-8lulj8AQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
